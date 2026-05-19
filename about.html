@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>We Are F.A | Finance Academy Hosur</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .history-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; max-width: 1100px; margin: auto; }
+    .history-text .section-tag { margin-bottom: 12px; }
+    .history-text h2 { font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--navy); margin-bottom: 20px; }
+    .history-text p { color: var(--gray); line-height: 1.8; margin-bottom: 16px; font-size: .95rem; }
+    .history-milestones { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+    .milestone { display: flex; gap: 14px; align-items: center; padding: 14px 18px; background: var(--light); border-radius: 12px; border-left: 3px solid var(--gold); }
+    .milestone-year { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 900; color: var(--gold); min-width: 60px; }
+    .milestone-desc { font-size: .87rem; color: var(--navy); }
+    .history-visual { background: linear-gradient(135deg, var(--navy), var(--navy2)); border-radius: 24px; padding: 50px 40px; color: white; }
+    .history-visual h3 { font-size: 1.5rem; color: var(--gold2); margin-bottom: 24px; }
+    .history-fact { display: flex; align-items: center; gap: 14px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+    .history-fact:last-child { border-bottom: none; }
+    .history-fact-icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(201,168,76,.2); display: flex; align-items: center; justify-content: center; color: var(--gold2); font-size: .95rem; }
+    .history-fact-text strong { display: block; color: white; font-size: .92rem; }
+    .history-fact-text span { color: rgba(255,255,255,.55); font-size: .82rem; }
+    .advisor-card { background: var(--white); border-radius: var(--radius); padding: 32px; border: 1px solid #e5e7eb; transition: var(--trans); text-align: center; }
+    .advisor-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--gold); }
+    .advisor-avatar { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, var(--navy), var(--gold)); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: white; margin: 0 auto 16px; }
+    .advisor-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 4px; }
+    .advisor-card .role { font-size: .8rem; color: var(--gold); font-weight: 600; margin-bottom: 10px; }
+    .advisor-card p { font-size: .83rem; color: var(--gray); line-height: 1.6; }
+    @media (max-width: 768px) { .history-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div id="loader"><div class="loader-ring"></div></div>
+
+<nav class="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">FA</div>
+    <div><span>Finance Academy</span><small>Hosur, Tamil Nadu</small></div>
+  </a>
+  <ul class="nav-links">
+    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+    <li class="nav-item">
+      <span class="nav-link active" data-dropdown>We Are F.A <i class="fas fa-chevron-down"></i></span>
+      <div class="dropdown">
+        <a href="#history"><i class="fas fa-landmark fa-fw"></i> &nbsp;History</a>
+        <a href="#advisors"><i class="fas fa-users fa-fw"></i> &nbsp;Council of Advisors</a>
+        <a href="#tutors"><i class="fas fa-chalkboard-teacher fa-fw"></i> &nbsp;Our Tutors</a>
+        <a href="#stories"><i class="fas fa-star fa-fw"></i> &nbsp;Good News Stories</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+    <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
+    <li class="nav-item">
+      <span class="nav-link" data-dropdown>Lounge <i class="fas fa-chevron-down"></i></span>
+      <div class="dropdown">
+        <a href="lounge.html#news">News &amp; Events</a>
+        <a href="lounge.html#wof">Wall of Fame</a>
+        <a href="lounge.html#articles">Articles</a>
+      </div>
+    </li>
+    <li class="nav-item"><a href="contact.html" class="nav-link nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>We Are F.A</div>
+    <h1>We Are <span style="color:var(--gold2)">F.A</span></h1>
+    <p>Finance courses for all of you; for everyone of you. Discover the story, people and values that make FA Hosur's most trusted finance institute.</p>
+  </div>
+</section>
+
+<!-- ════ HISTORY ════ -->
+<section class="section" id="history" style="background:var(--white);">
+  <div class="history-grid">
+    <div class="history-text" data-aos="fade-right">
+      <div class="section-tag">Our Story</div>
+      <h2>The History of Finance Academy</h2>
+      <p>F.A. – the Finance Academy was founded with a singular mission: to make world-class finance education accessible to every student in and around Hosur, Tamil Nadu. What began as a small coaching centre has grown into a fully equipped institution with dedicated labs, a library, and a publishing arm.</p>
+      <p>Today, FA stands as Hosur's most trusted finance coaching institute — with a track record of producing rank holders, state toppers and successful CA professionals year after year.</p>
+      <div class="history-milestones">
+        <div class="milestone">
+          <span class="milestone-year">Est.</span>
+          <span class="milestone-desc">Founded in Hosur with a vision to democratise finance education in Tier-2 cities.</span>
+        </div>
+        <div class="milestone">
+          <span class="milestone-year">100+</span>
+          <span class="milestone-desc">Rank holders and achievers produced since inception.</span>
+        </div>
+        <div class="milestone">
+          <span class="milestone-year">26</span>
+          <span class="milestone-desc">Programs across 9 learning modes — the most comprehensive offering in the region.</span>
+        </div>
+        <div class="milestone">
+          <span class="milestone-year">500+</span>
+          <span class="milestone-desc">Students currently enrolled across all FA programs.</span>
+        </div>
+      </div>
+    </div>
+    <div class="history-visual" data-aos="fade-left">
+      <h3>FA by the Numbers</h3>
+      <div class="history-fact">
+        <div class="history-fact-icon"><i class="fas fa-user-graduate"></i></div>
+        <div class="history-fact-text"><strong>500+ Students Enrolled</strong><span>Across all active programs</span></div>
+      </div>
+      <div class="history-fact">
+        <div class="history-fact-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <div class="history-fact-text"><strong>20+ Expert Tutors</strong><span>Industry professionals &amp; academics</span></div>
+      </div>
+      <div class="history-fact">
+        <div class="history-fact-icon"><i class="fas fa-trophy"></i></div>
+        <div class="history-fact-text"><strong>100+ Winners</strong><span>Rank holders &amp; distinction holders</span></div>
+      </div>
+      <div class="history-fact">
+        <div class="history-fact-icon"><i class="fas fa-book"></i></div>
+        <div class="history-fact-text"><strong>10,000+ Questions</strong><span>In our comprehensive question bank</span></div>
+      </div>
+      <div class="history-fact">
+        <div class="history-fact-icon"><i class="fas fa-th-large"></i></div>
+        <div class="history-fact-text"><strong>26 Programs</strong><span>Offered across 9 learning modes</span></div>
+      </div>
+      <div class="history-fact">
+        <div class="history-fact-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="history-fact-text"><strong>Hosur, Tamil Nadu</strong><span>S-2 Marutham Enclave, HUDCO</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ COUNCIL OF ADVISORS ════ -->
+<section class="section" id="advisors" style="background:var(--light);">
+  <div class="section-center">
+    <div class="section-tag">Leadership</div>
+    <h2 class="section-title">Council of Advisors</h2>
+    <p class="section-subtitle">Our advisory council comprises seasoned finance professionals and educators who guide FA's academic direction and quality standards.</p>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(260px,1fr)); gap:24px; max-width:1200px; margin:auto;">
+    <div class="advisor-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="advisor-avatar">R</div>
+      <h3>Dr. Rajesh Subramaniam</h3>
+      <div class="role">Chief Academic Advisor</div>
+      <p>FCA, PhD in Accounting with 25+ years of experience in CA education and curriculum design at national level.</p>
+    </div>
+    <div class="advisor-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="advisor-avatar">L</div>
+      <h3>CA Lakshmi Venkat</h3>
+      <div class="role">Finance Strategy Advisor</div>
+      <p>Chartered Accountant and financial strategist with expertise in tax planning, corporate finance and student mentoring.</p>
+    </div>
+    <div class="advisor-card" data-aos="fade-up" data-aos-delay="160">
+      <div class="advisor-avatar">M</div>
+      <h3>Prof. Mohan Das</h3>
+      <div class="role">Academic Excellence Advisor</div>
+      <p>Former professor at a premier institution with deep expertise in Business Mathematics and Statistical Methods.</p>
+    </div>
+    <div class="advisor-card" data-aos="fade-up" data-aos-delay="240">
+      <div class="advisor-avatar">S</div>
+      <h3>CA Sunitha Rajan</h3>
+      <div class="role">Industry Relations Advisor</div>
+      <p>Senior CA practitioner bridging the gap between academics and real-world finance industry requirements.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ OUR TUTORS ════ -->
+<section class="section team-section" id="tutors">
+  <div class="section-center">
+    <div class="section-tag">Meet the Team</div>
+    <h2 class="section-title">Our Expert Tutors</h2>
+    <p class="section-subtitle">Over 20 dedicated educators who bring deep subject expertise and a genuine passion for student success.</p>
+  </div>
+  <div class="team-grid">
+    <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="team-photo">AK</div>
+      <div class="team-body">
+        <h3>Arun Kumar</h3>
+        <div class="role">Accounting &amp; Auditing</div>
+        <p>FCA with 15 years of teaching experience. Specialises in Paper 1 and advanced auditing concepts.</p>
+        <div class="team-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="team-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="team-photo">PR</div>
+      <div class="team-body">
+        <h3>Preethi Ramesh</h3>
+        <div class="role">Business Law</div>
+        <p>LLM, CA with expertise in corporate and business law. Known for simplifying complex legal concepts.</p>
+        <div class="team-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="team-card" data-aos="fade-up" data-aos-delay="160">
+      <div class="team-photo">SK</div>
+      <div class="team-body">
+        <h3>Senthil Kumar</h3>
+        <div class="role">Mathematics &amp; Statistics</div>
+        <p>M.Sc Mathematics with 12 years of coaching experience. Produced multiple Paper 3 toppers.</p>
+        <div class="team-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="team-card" data-aos="fade-up" data-aos-delay="240">
+      <div class="team-photo">VM</div>
+      <div class="team-body">
+        <h3>Vanitha Mohan</h3>
+        <div class="role">Business Economics</div>
+        <p>MBA, M.Com with 10 years of experience teaching economics and commercial knowledge at foundation level.</p>
+        <div class="team-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="team-photo">KN</div>
+      <div class="team-body">
+        <h3>Krishnamurthy N.</h3>
+        <div class="role">Taxation &amp; Finance</div>
+        <p>CA, CMA with deep expertise in GST, Income Tax and corporate finance coaching.</p>
+        <div class="team-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="team-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="team-photo">DR</div>
+      <div class="team-body">
+        <h3>Dhanya Raj</h3>
+        <div class="role">Soft Skills &amp; Communication</div>
+        <p>MA English, corporate trainer who helps students develop presentation, writing and communication skills.</p>
+        <div class="team-socials">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ GOOD NEWS STORIES ════ -->
+<section class="section stories-section" id="stories">
+  <div class="section-center">
+    <div class="section-tag">Success Stories</div>
+    <h2 class="section-title">Good News Stories</h2>
+    <p class="section-subtitle">Every rank, every first attempt, every distinction is a testament to the FA difference.</p>
+  </div>
+  <div class="stories-grid" style="max-width:1200px; margin:0 auto;">
+    <div class="story-card" data-aos="fade-up" data-aos-delay="0">
+      <div class="story-avatar">A</div>
+      <h3>Ananya Sharma</h3>
+      <div class="rank">All India Rank 12 — CA Foundation</div>
+      <p>"FA's structured study material and the relentless support of my tutors made the impossible possible. I am grateful to the entire FA family."</p>
+      <div class="story-achievement"><i class="fas fa-trophy"></i> AIR 12</div>
+    </div>
+    <div class="story-card" data-aos="fade-up" data-aos-delay="80">
+      <div class="story-avatar">R</div>
+      <h3>Ravi Kumar</h3>
+      <div class="rank">State Topper — Tamil Nadu</div>
+      <p>"The 10,000+ question bank is FA's secret weapon. I practiced every type of question imaginable and nothing could surprise me in the exam hall."</p>
+      <div class="story-achievement"><i class="fas fa-medal"></i> State Topper TN</div>
+    </div>
+    <div class="story-card" data-aos="fade-up" data-aos-delay="160">
+      <div class="story-avatar">P</div>
+      <h3>Priya Nair</h3>
+      <div class="rank">First Attempt — Distinction</div>
+      <p>"My custom coaching plan at FA was transformative. My mentor identified exactly what I needed to work on. Cleared in first attempt with distinction."</p>
+      <div class="story-achievement"><i class="fas fa-star"></i> First Attempt</div>
+    </div>
+    <div class="story-card" data-aos="fade-up" data-aos-delay="240">
+      <div class="story-avatar">S</div>
+      <h3>Suresh Babu</h3>
+      <div class="rank">Distinction — CA Foundation</div>
+      <p>"FA's own published study material is incredibly focused and exam-relevant. Far better than generic textbooks. Scored distinction across all papers."</p>
+      <div class="story-achievement"><i class="fas fa-award"></i> Distinction — All Papers</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Become Part of the FA Success Story</h2>
+  <p>Join Hosur's most trusted finance academy and take the first step toward your professional goals.</p>
+  <a href="contact.html" class="btn-dark"><i class="fas fa-phone"></i> &nbsp;Enquire Now</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo">
+        <div class="nav-logo-icon">FA</div>
+        <div><span style="color:#fff;font-size:1.1rem;font-weight:700;">Finance Academy</span><small style="color:#c9a84c;font-size:.65rem;">Hosur, Tamil Nadu</small></div>
+      </div>
+      <p>F.A. – the Finance Academy is Hosur's premier institution for professional finance education.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About FA</a></li><li><a href="programs.html">Programs</a></li><li><a href="store.html">Store</a></li><li><a href="lounge.html">Lounge</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>We Are FA</h4><ul><li><a href="#history">History</a></li><li><a href="#advisors">Council of Advisors</a></li><li><a href="#tutors">Our Tutors</a></li><li><a href="#stories">Good News Stories</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+918098301702"><i class="fas fa-phone fa-fw" style="color:#c9a84c;"></i> +91 8098-301-702</a></li><li><a href="mailto:supportfa@fahosur.com"><i class="fas fa-envelope fa-fw" style="color:#c9a84c;"></i> supportfa@fahosur.com</a></li><li><a href="#"><i class="fas fa-map-marker-alt fa-fw" style="color:#c9a84c;"></i> Hosur – 635109</a></li><li><a href="#"><i class="fas fa-clock fa-fw" style="color:#c9a84c;"></i> Mon–Sat 9am–6pm</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 <span>FA – the Finance Academy</span>. All rights reserved.</p>
+    <p>S-2, Marutham Enclave, 2nd Floor, Hosur – 635109</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/918098301702" target="_blank" class="float-whatsapp"><i class="fab fa-whatsapp"></i></a>
+<a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
