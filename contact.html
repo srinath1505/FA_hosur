@@ -5,258 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | FA Finance Academy</title>
   <meta name="description" content="Get in touch with FA – the Finance Academy. Call, WhatsApp, email or visit us at our Hosur campus. Enroll in a program or order study materials." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    /* ── Page Hero ── */
-    .page-hero {
-      min-height: 380px;
-      display: flex;
-      align-items: flex-end;
-      padding: 140px 0 80px;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 20% 50%, rgba(201,168,76,.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .page-hero-label { margin-bottom: 16px; }
-    .page-hero-title {
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
-      font-weight: 300;
-      color: var(--white);
-      line-height: 1.0;
-      margin-bottom: 20px;
-    }
-    .page-hero-title em { color: var(--gold); font-style: italic; }
-    .page-hero-sub { font-size: 1rem; color: var(--muted); max-width: 500px; line-height: 1.75; }
-
-    /* ── Quick Contact Options ── */
-    .contact-options-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-    .contact-option-card {
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 32px 24px;
-      text-align: center;
-      transition: border-color 0.3s, transform 0.4s var(--ease-out-expo), background 0.3s, box-shadow 0.4s;
-      display: block;
-      text-decoration: none;
-    }
-    .contact-option-card:hover {
-      border-color: rgba(201,168,76,.3);
-      transform: translateY(-6px);
-      background: rgba(201,168,76,.04);
-      box-shadow: var(--shadow-card);
-    }
-    .contact-option-icon {
-      font-size: 1.8rem;
-      color: var(--gold);
-      margin-bottom: 14px;
-      display: block;
-      transition: transform 0.4s var(--ease-out-expo);
-    }
-    .contact-option-card:hover .contact-option-icon { transform: scale(1.15); }
-    .contact-option-card h4 {
-      font-size: 1rem;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-    .contact-option-card p,
-    .contact-option-card a {
-      font-size: 0.84rem;
-      color: var(--muted);
-      line-height: 1.72;
-      margin: 0;
-      display: block;
-      transition: color 0.3s;
-    }
-    .contact-option-card:hover p,
-    .contact-option-card:hover a { color: var(--text); }
-    .contact-option-card .wa-icon { color: #25d366; }
-
-    /* ── Contact Detail Rows ── */
-    .contact-detail-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-    }
-    .contact-detail-row:last-of-type { border-bottom: none; }
-    .contact-detail-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: rgba(201,168,76,.1);
-      border: 1px solid rgba(201,168,76,.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 1rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-    .contact-detail-label {
-      font-family: var(--font-label);
-      font-size: 0.6rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 3px;
-      display: block;
-    }
-    .contact-detail-value {
-      font-size: 0.9rem;
-      color: var(--text);
-      line-height: 1.65;
-    }
-    .contact-detail-value a {
-      color: var(--text);
-      transition: color 0.3s;
-    }
-    .contact-detail-value a:hover { color: var(--gold); }
-
-    /* ── Hours Box ── */
-    .hours-box {
-      background: rgba(201,168,76,.06);
-      border: 1px solid rgba(201,168,76,.18);
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-top: 24px;
-      margin-bottom: 24px;
-    }
-    .hours-box-title {
-      font-family: var(--font-label);
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .hours-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.84rem;
-      color: var(--muted);
-      padding: 5px 0;
-    }
-    .hours-row span:last-child { color: var(--text); }
-
-    /* ── Social Row ── */
-    .contact-social-row {
-      display: flex;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    /* ── Form ── */
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-    .form-group { display: flex; flex-direction: column; gap: 7px; }
-    .form-label {
-      font-family: var(--font-label);
-      font-size: 0.6rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .form-input {
-      width: 100%;
-      padding: 12px 16px;
-      background: transparent;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text);
-      font-family: var(--font-body);
-      font-size: 0.92rem;
-      outline: none;
-      transition: border-color 0.3s;
-    }
-    .form-input::placeholder { color: var(--muted); }
-    .form-input:focus { border-color: var(--gold); }
-    select.form-input option { background: var(--surface2); color: var(--text); }
-    textarea.form-input { resize: vertical; min-height: 120px; }
-    .form-submit {
-      width: 100%;
-      padding: 16px 32px;
-      background: var(--gold);
-      color: var(--bg);
-      border: none;
-      border-radius: var(--radius-sm);
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: none;
-      transition: background 0.3s, transform 0.3s var(--ease-out-expo), box-shadow 0.3s;
-      box-shadow: 0 4px 24px rgba(201,168,76,.3);
-    }
-    .form-submit:hover {
-      background: var(--gold2);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 40px rgba(201,168,76,.45);
-    }
-
-    /* ── Map ── */
-    .map-section { background: var(--surface2); }
-    .map-section iframe {
-      display: block;
-      width: 100%;
-      height: 400px;
-      border: none;
-      filter: grayscale(40%) invert(90%) hue-rotate(180deg) brightness(0.85);
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 1024px) {
-      .contact-options-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 768px) {
-      .contact-options-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .form-row { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 480px) {
-      .contact-options-grid { grid-template-columns: 1fr; }
-      .form-submit { cursor: pointer; }
-    }
-  </style>
 </head>
 <body>
 
-<!-- Custom Cursor -->
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-
-<!-- Loader -->
 <div id="loader">
-  <div class="loader-logo">F · A</div>
-  <div class="loader-bar"></div>
+  <div class="loader-text">FA</div>
+  <div class="loader-line"></div>
 </div>
 
-<!-- Navbar -->
 <nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">FA</div>
-    Finance <span>Academy</span>
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-mark">FA</span>
+    <span class="nav-brand-text">Finance Academy<span>Hosur, Tamil Nadu</span></span>
   </a>
   <div class="nav-links">
     <a href="index.html" class="nav-link">Home</a>
@@ -266,8 +32,7 @@
     <a href="lounge.html" class="nav-link">Lounge</a>
   </div>
   <div class="nav-cta">
-    <a href="contact.html" class="btn btn-outline">Enquire</a>
-    <a href="contact.html" class="btn btn-primary btn-magnetic">Enroll Now</a>
+    <a href="contact.html" class="btn-nav active">Enroll Now</a>
   </div>
   <button class="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -275,35 +40,28 @@
 </nav>
 
 <div id="nav-overlay">
-  <div class="nav-overlay-links">
-    <a href="index.html" class="nav-overlay-link">Home</a>
-    <a href="about.html" class="nav-overlay-link">About</a>
-    <a href="programs.html" class="nav-overlay-link">Programs</a>
-    <a href="store.html" class="nav-overlay-link">Store</a>
-    <a href="lounge.html" class="nav-overlay-link">Lounge</a>
-    <a href="contact.html" class="nav-overlay-link">Contact</a>
-  </div>
+  <a href="index.html" class="nav-overlay-link">Home</a>
+  <a href="about.html" class="nav-overlay-link">About</a>
+  <a href="programs.html" class="nav-overlay-link">Programs</a>
+  <a href="store.html" class="nav-overlay-link">Store</a>
+  <a href="lounge.html" class="nav-overlay-link">Lounge</a>
+  <a href="contact.html" class="nav-overlay-link">Contact</a>
 </div>
 
-<!-- ════════════════════════════════════
-     PAGE HERO
-     ════════════════════════════════════ -->
+<!-- Page Hero -->
 <header class="page-hero">
   <div class="container" style="position:relative;z-index:2;">
-    <div class="label page-hero-label">Contact</div>
-    <h1 class="page-hero-title">Let's Start a<br><em>Conversation</em></h1>
-    <p class="page-hero-sub">Whether you're ready to enroll, exploring your options, or simply have a question — we're here and happy to help.</p>
+    <div class="label page-hero-label reveal">Contact</div>
+    <h1 class="page-hero-title reveal" data-delay="1">Let's Start a<br><em>Conversation</em></h1>
+    <p class="page-hero-sub reveal" data-delay="2">Whether you're ready to enroll, exploring your options, or simply have a question — we're here and happy to help.</p>
   </div>
 </header>
 
-<!-- ════════════════════════════════════
-     QUICK CONTACT OPTIONS
-     ════════════════════════════════════ -->
-<section class="section" style="padding:64px 0;background:var(--bg);border-bottom:1px solid var(--border);">
+<!-- Quick Contact Options -->
+<section class="section-sm bg-dark" style="border-bottom:1px solid var(--border);">
   <div class="container">
     <div class="contact-options-grid">
-
-      <div class="contact-option-card">
+      <div class="contact-option-card reveal">
         <i class="fas fa-phone-alt contact-option-icon"></i>
         <h4>Call Us</h4>
         <a href="tel:+918098301702">+91 8098-301-702</a>
@@ -311,40 +69,37 @@
         <p style="margin-top:6px;font-size:.78rem;">Mon – Sat, 9am – 6pm</p>
       </div>
 
-      <a href="https://wa.me/918098301702" class="contact-option-card" target="_blank" rel="noopener">
+      <a href="https://wa.me/918098301702" class="contact-option-card reveal" data-delay="1" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp contact-option-icon wa-icon"></i>
         <h4>WhatsApp</h4>
-        <p>Chat with us instantly on WhatsApp — enrolment queries, material orders, or general guidance.</p>
+        <p>Chat with us instantly — enrolment queries, material orders, or general guidance.</p>
         <p style="margin-top:8px;color:var(--gold);font-size:.8rem;">+91 8098-301-702</p>
       </a>
 
-      <a href="mailto:supportfa@fahosur.com" class="contact-option-card">
+      <a href="mailto:supportfa@fahosur.com" class="contact-option-card reveal" data-delay="2">
         <i class="fas fa-envelope contact-option-icon"></i>
         <h4>Email Us</h4>
         <p>supportfa@fahosur.com</p>
         <p style="margin-top:6px;font-size:.78rem;">We reply within 24 hours</p>
       </a>
 
-      <div class="contact-option-card">
+      <div class="contact-option-card reveal" data-delay="3">
         <i class="fas fa-map-marker-alt contact-option-icon"></i>
         <h4>Visit Us</h4>
         <p>S-2 Marutham Enclave, 2nd Floor<br>Gandhi Nagar, HUDCO<br>Hosur – 635109, Tamil Nadu</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-     CONTACT FORM + INFO
-     ════════════════════════════════════ -->
+<!-- Contact Form + Info -->
 <section class="section bg-surface">
   <div class="container">
-    <div class="two-col" style="gap:60px;align-items:start;">
+    <div class="two-col" style="gap:48px;">
 
       <!-- Left: Contact Info -->
-      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:48px;">
-        <h3 style="font-family:var(--font-serif);font-size:2rem;font-weight:500;color:var(--white);margin-bottom:12px;">Get in Touch</h3>
+      <div class="reveal-left" style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:48px;">
+        <h3 style="font-size:2rem;color:var(--white);margin-bottom:12px;">Get in Touch</h3>
         <p style="margin-bottom:32px;font-size:.9rem;">We're available Monday to Saturday, 9am to 6pm. Walk in, call, WhatsApp or email — our team will be delighted to assist you.</p>
 
         <div class="contact-detail-row">
@@ -383,7 +138,7 @@
           <div>
             <span class="contact-detail-label">WhatsApp</span>
             <div class="contact-detail-value">
-              <a href="https://wa.me/918098301702" target="_blank">+91 8098-301-702</a>
+              <a href="https://wa.me/918098301702" target="_blank" rel="noopener">+91 8098-301-702</a>
             </div>
           </div>
         </div>
@@ -397,51 +152,45 @@
 
         <div class="contact-detail-label" style="margin-bottom:10px;">Follow FA</div>
         <div class="contact-social-row">
-          <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-youtube"></i></a>
-          <a href="https://wa.me/918098301702" class="footer-social"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/918098301702" class="f-social"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
 
       <!-- Right: Contact Form -->
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:48px;">
-        <h3 style="font-family:var(--font-serif);font-size:2rem;font-weight:500;color:var(--white);margin-bottom:10px;">Send Us a Message</h3>
+      <div class="reveal-right" style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:48px;">
+        <h3 style="font-size:2rem;color:var(--white);margin-bottom:10px;">Send Us a Message</h3>
         <p style="margin-bottom:32px;font-size:.9rem;">We reply within 24 hours. For urgent queries, please call or WhatsApp us directly.</p>
 
-        <form action="#" method="POST" style="display:flex;flex-direction:column;gap:20px;">
-
+        <form id="contactForm" style="display:flex;flex-direction:column;gap:20px;">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="fname">First Name</label>
-              <input class="form-input" type="text" id="fname" name="first_name" placeholder="Your first name" required
-                onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" />
+              <input class="form-input" type="text" id="fname" name="first_name" placeholder="Your first name" required />
             </div>
             <div class="form-group">
               <label class="form-label" for="lname">Last Name</label>
-              <input class="form-input" type="text" id="lname" name="last_name" placeholder="Your last name" required
-                onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" />
+              <input class="form-input" type="text" id="lname" name="last_name" placeholder="Your last name" required />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="email">Email Address</label>
-              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required
-                onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" />
+              <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required />
             </div>
             <div class="form-group">
               <label class="form-label" for="phone">Phone Number</label>
-              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX"
-                onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'" />
+              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="program">Program of Interest</label>
-            <select class="form-input" id="program" name="program"
-              onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+            <select class="form-input" id="program" name="program">
               <option value="" disabled selected>Select a program…</option>
               <option value="ca-p1">CA Foundation Paper 1 — Accounting</option>
               <option value="ca-p2">CA Foundation Paper 2 — Business Laws</option>
@@ -455,12 +204,10 @@
 
           <div class="form-group">
             <label class="form-label" for="message">Your Message</label>
-            <textarea class="form-input" id="message" name="message" placeholder="Tell us how we can help you — your goals, your preferred learning mode, or any questions you have…" rows="5"
-              onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+            <textarea class="form-input" id="message" name="message" placeholder="Tell us how we can help you — your goals, preferred learning mode, or any questions you have…" rows="5"></textarea>
           </div>
 
           <button type="submit" class="form-submit">Send Message &nbsp;<i class="fas fa-paper-plane"></i></button>
-
         </form>
       </div>
 
@@ -468,105 +215,93 @@
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-     MAP
-     ════════════════════════════════════ -->
-<div class="map-section">
+<!-- Map -->
+<div style="background:var(--card);">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31300.19265756537!2d77.8178!3d12.7409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae741cd8b3d18d%3A0x6f5a7c9f6aba7c8e!2sHosur%2C%20Tamil%20Nadu%20635109!5e0!3m2!1sen!2sin!4v1716000000000!5m2!1sen!2sin"
     allowfullscreen=""
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade"
-    title="FA Finance Academy — Hosur, Tamil Nadu">
+    title="FA Finance Academy — Hosur, Tamil Nadu"
+    class="map-section">
   </iframe>
 </div>
 
-<!-- ════════════════════════════════════
-     FAQ
-     ════════════════════════════════════ -->
+<!-- FAQ -->
 <section class="section bg-dark" id="faq">
   <div class="container">
-    <div class="section-header">
-      <div class="label">Common Questions</div>
-      <h2 class="section-title">Before You <em class="text-gold italic">Reach Out</em></h2>
+    <div class="section-hd reveal">
+      <div class="label" style="margin-bottom:16px;">Common Questions</div>
+      <h2 style="font-size:clamp(2rem,4vw,3.5rem);color:var(--white);">Before You <em style="color:var(--gold);">Reach Out</em></h2>
     </div>
     <div style="max-width:800px;">
       <div class="accordion">
-
         <div class="accordion-item">
-          <button class="accordion-header">
-            <h4>What are FA's working hours?</h4>
-            <div class="accordion-icon">+</div>
+          <button class="accordion-hd">
+            <span>What are FA's working hours?</span>
+            <span class="accordion-icon">+</span>
           </button>
-          <div class="accordion-body">
+          <div class="accordion-bd">
             <p>FA is open Monday to Friday from 9:00am to 6:00pm, and Saturday from 9:00am to 4:00pm. We are closed on Sundays. For urgent queries outside office hours, please reach us via WhatsApp at +91 8098-301-702 and we will respond as soon as possible.</p>
           </div>
         </div>
-
         <div class="accordion-item">
-          <button class="accordion-header">
-            <h4>Can I visit the campus before enrolling?</h4>
-            <div class="accordion-icon">+</div>
+          <button class="accordion-hd">
+            <span>Can I visit the campus before enrolling?</span>
+            <span class="accordion-icon">+</span>
           </button>
-          <div class="accordion-body">
+          <div class="accordion-bd">
             <p>Absolutely — we encourage prospective students and parents to visit our campus. You can meet the tutors, tour our labs and library, attend a demo session, and discuss which program and learning mode is right for you. Walk-ins are welcome during working hours, though scheduling an appointment in advance is recommended for a more personalised session.</p>
           </div>
         </div>
-
         <div class="accordion-item">
-          <button class="accordion-header">
-            <h4>Is online counselling available for outstation students?</h4>
-            <div class="accordion-icon">+</div>
+          <button class="accordion-hd">
+            <span>Is online counselling available for outstation students?</span>
+            <span class="accordion-icon">+</span>
           </button>
-          <div class="accordion-body">
+          <div class="accordion-bd">
             <p>Yes — for students who are not in Hosur, we offer online counselling sessions via video call. Contact us via WhatsApp or email to schedule a session with one of our admissions advisors, who will guide you through program selection, learning mode options, fees and the enrollment process.</p>
           </div>
         </div>
-
         <div class="accordion-item">
-          <button class="accordion-header">
-            <h4>How quickly will you respond to an enquiry?</h4>
-            <div class="accordion-icon">+</div>
+          <button class="accordion-hd">
+            <span>How quickly will you respond to an enquiry?</span>
+            <span class="accordion-icon">+</span>
           </button>
-          <div class="accordion-body">
+          <div class="accordion-bd">
             <p>We aim to respond to all enquiries within 24 hours on working days. WhatsApp queries are typically answered within a few hours. For the fastest response, calling us directly at +91 8098-301-702 or +91 8098-301-703 is always the most efficient option during office hours.</p>
           </div>
         </div>
-
         <div class="accordion-item">
-          <button class="accordion-header">
-            <h4>Can I order study materials for home delivery?</h4>
-            <div class="accordion-icon">+</div>
+          <button class="accordion-hd">
+            <span>Can I order study materials for home delivery?</span>
+            <span class="accordion-icon">+</span>
           </button>
-          <div class="accordion-body">
+          <div class="accordion-bd">
             <p>Yes — FA's study materials can be ordered for home delivery across Tamil Nadu and beyond. To place an order, contact us via WhatsApp at +91 8098-301-702 or email us at supportfa@fahosur.com with the materials you need, your delivery address, and your contact details. Orders are typically dispatched within 2 business days. Visit our Store page for the full range of available titles and prices.</p>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="margin-bottom:0;">
-          <div class="nav-logo-mark">FA</div>Finance <span>Academy</span>
-        </a>
-        <p>F.A. – the Finance Academy. 26 programs, 9 modes, 500+ students, 100+ winners. Hosur's most trusted finance institution.</p>
-        <div class="footer-socials">
-          <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-youtube"></i></a>
-          <a href="https://wa.me/918098301702" class="footer-social"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+        <div class="footer-brand-name">Finance <span>Academy</span></div>
+        <p>FA – the Finance Academy. 26 programs, 9 modes, 500+ students, 100+ winners. Hosur's most trusted finance institution.</p>
+        <div class="f-socials">
+          <a href="#" class="f-social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/918098301702" class="f-social"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Navigation</div>
+      <div>
+        <span class="footer-col-title">Navigation</span>
         <div class="footer-links">
           <a href="index.html" class="footer-link">Home</a>
           <a href="about.html" class="footer-link">We Are FA</a>
@@ -576,8 +311,8 @@
           <a href="contact.html" class="footer-link">Contact</a>
         </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Programs</div>
+      <div>
+        <span class="footer-col-title">Programs</span>
         <div class="footer-links">
           <a href="programs.html" class="footer-link">CA Foundation Paper 1</a>
           <a href="programs.html" class="footer-link">CA Foundation Paper 2</a>
@@ -587,8 +322,8 @@
           <a href="programs.html" class="footer-link">Custom Coaching</a>
         </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Contact</div>
+      <div>
+        <span class="footer-col-title">Contact</span>
         <div class="footer-links">
           <a href="tel:+918098301702" class="footer-link">+91 8098-301-702</a>
           <a href="tel:+918098301703" class="footer-link">+91 8098-301-703</a>
@@ -605,11 +340,9 @@
   </div>
 </footer>
 
+<a href="https://wa.me/918098301702" id="wa-float" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 <a href="#" id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
-<a href="https://wa.me/918098301702" id="wa-float" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

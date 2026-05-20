@@ -5,163 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FA Lounge | FA Finance Academy</title>
   <meta name="description" content="The FA Lounge — news, events, Wall of Fame, and expert articles from FA – the Finance Academy, Hosur." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    /* ── Page Hero ── */
-    .page-hero {
-      min-height: 380px;
-      display: flex;
-      align-items: flex-end;
-      padding: 140px 0 80px;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 20% 50%, rgba(201,168,76,.07) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .page-hero-label { margin-bottom: 16px; }
-    .page-hero-title {
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
-      font-weight: 300;
-      color: var(--white);
-      line-height: 1.0;
-      margin-bottom: 20px;
-    }
-    .page-hero-title em { color: var(--gold); font-style: italic; }
-    .page-hero-sub { font-size: 1rem; color: var(--muted); max-width: 500px; line-height: 1.75; }
-
-    /* ── Section tabs / nav ── */
-    .lounge-nav {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      border-bottom: 1px solid var(--border);
-      background: var(--surface2);
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .lounge-nav::-webkit-scrollbar { display: none; }
-    .lounge-nav-link {
-      font-family: var(--font-label);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding: 20px 32px;
-      white-space: nowrap;
-      border-bottom: 2px solid transparent;
-      transition: color 0.3s, border-color 0.3s;
-    }
-    .lounge-nav-link:hover, .lounge-nav-link.active {
-      color: var(--gold);
-      border-bottom-color: var(--gold);
-    }
-
-    /* ── Wall of Fame ── */
-    .wof-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-    }
-    .wof-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 28px 20px;
-      text-align: center;
-      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s, border-color 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .wof-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(201,168,76,.06), transparent 60%);
-      opacity: 0;
-      transition: opacity 0.4s;
-      pointer-events: none;
-    }
-    .wof-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-lift);
-      border-color: var(--gold);
-    }
-    .wof-card:hover::before { opacity: 1; }
-    .wof-rank {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold), #a07832);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--bg);
-      margin: 0 auto 14px;
-      box-shadow: 0 4px 16px rgba(201,168,76,.25);
-    }
-    .wof-name {
-      font-family: var(--font-serif);
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 4px;
-      line-height: 1.2;
-    }
-    .wof-program {
-      font-size: 0.72rem;
-      color: var(--muted);
-      margin-bottom: 10px;
-      line-height: 1.4;
-    }
-    .wof-score {
-      font-family: var(--font-serif);
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--gold);
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 1024px) {
-      .wof-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 768px) {
-      .wof-grid { grid-template-columns: repeat(2, 1fr); }
-      .blog-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 480px) {
-      .wof-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .wof-card { padding: 20px 14px; }
-    }
-  </style>
 </head>
 <body>
 
-<!-- Custom Cursor -->
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-
-<!-- Loader -->
 <div id="loader">
-  <div class="loader-logo">F · A</div>
-  <div class="loader-bar"></div>
+  <div class="loader-text">FA</div>
+  <div class="loader-line"></div>
 </div>
 
-<!-- Navbar -->
 <nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-mark">FA</div>
-    Finance <span>Academy</span>
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-mark">FA</span>
+    <span class="nav-brand-text">Finance Academy<span>Hosur, Tamil Nadu</span></span>
   </a>
   <div class="nav-links">
     <a href="index.html" class="nav-link">Home</a>
@@ -171,8 +32,7 @@
     <a href="lounge.html" class="nav-link active">Lounge</a>
   </div>
   <div class="nav-cta">
-    <a href="contact.html" class="btn btn-outline">Enquire</a>
-    <a href="contact.html" class="btn btn-primary btn-magnetic">Enroll Now</a>
+    <a href="contact.html" class="btn-nav">Enroll Now</a>
   </div>
   <button class="hamburger" aria-label="Open menu">
     <span></span><span></span><span></span>
@@ -180,344 +40,300 @@
 </nav>
 
 <div id="nav-overlay">
-  <div class="nav-overlay-links">
-    <a href="index.html" class="nav-overlay-link">Home</a>
-    <a href="about.html" class="nav-overlay-link">About</a>
-    <a href="programs.html" class="nav-overlay-link">Programs</a>
-    <a href="store.html" class="nav-overlay-link">Store</a>
-    <a href="lounge.html" class="nav-overlay-link">Lounge</a>
-    <a href="contact.html" class="nav-overlay-link">Contact</a>
-  </div>
+  <a href="index.html" class="nav-overlay-link">Home</a>
+  <a href="about.html" class="nav-overlay-link">About</a>
+  <a href="programs.html" class="nav-overlay-link">Programs</a>
+  <a href="store.html" class="nav-overlay-link">Store</a>
+  <a href="lounge.html" class="nav-overlay-link">Lounge</a>
+  <a href="contact.html" class="nav-overlay-link">Contact</a>
 </div>
 
-<!-- ════════════════════════════════════
-     PAGE HERO
-     ════════════════════════════════════ -->
+<!-- Page Hero -->
 <header class="page-hero">
   <div class="container" style="position:relative;z-index:2;">
-    <div class="label page-hero-label">FA Lounge</div>
-    <h1 class="page-hero-title">News, Achievements &amp;<br><em>Knowledge</em></h1>
-    <p class="page-hero-sub">Stay connected with FA — the latest results, events, our Wall of Fame and expert articles from our faculty.</p>
+    <div class="label page-hero-label reveal">FA Lounge</div>
+    <h1 class="page-hero-title reveal" data-delay="1">News, Achievements &amp;<br><em>Knowledge</em></h1>
+    <p class="page-hero-sub reveal" data-delay="2">Stay connected with FA — the latest results, events, our Wall of Fame and expert articles from our faculty.</p>
   </div>
 </header>
 
-<!-- Lounge Navigation -->
+<!-- Lounge Nav -->
 <div class="lounge-nav">
   <a href="#news" class="lounge-nav-link active">News &amp; Events</a>
   <a href="#wof" class="lounge-nav-link">Wall of Fame</a>
   <a href="#articles" class="lounge-nav-link">Articles</a>
 </div>
 
-<!-- ════════════════════════════════════
-     NEWS & EVENTS
-     ════════════════════════════════════ -->
+<!-- News & Events -->
 <section class="section bg-surface" id="news">
   <div class="container">
-    <div class="section-header">
-      <div class="label">Latest Updates</div>
-      <h2 class="section-title">News &amp; Events<br><em class="text-gold italic">at FA</em></h2>
-      <p class="section-sub">From outstanding exam results to faculty announcements — everything happening at the Finance Academy.</p>
+    <div class="section-hd reveal">
+      <div class="label" style="margin-bottom:16px;">Latest Updates</div>
+      <h2 style="font-size:clamp(2rem,4vw,3.5rem);color:var(--white);margin-bottom:16px;">News &amp; Events <em style="color:var(--gold);">at FA</em></h2>
+      <p style="max-width:520px;">From outstanding exam results to faculty announcements — everything happening at the Finance Academy.</p>
     </div>
     <div class="blog-grid">
-
-      <!-- News 1 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#1a237e,#283593);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-trophy" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal">
+        <div class="blog-img" style="background:linear-gradient(135deg,#1e1b4b,#312e81);">
+          <i class="fas fa-trophy" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Results</span>
+          <span class="blog-cat">Results</span>
           <h3 class="blog-title">Outstanding May 2025 CA Foundation Results</h3>
           <p class="blog-excerpt">FA students achieve record results — 12 students placed in the All India Top 100 ranks for the May 2025 CA Foundation examinations. Our best result cycle yet.</p>
           <div class="blog-meta"><span>FA News · May 2025</span><span>Results</span></div>
         </div>
       </div>
 
-      <!-- News 2 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#004d40,#00695c);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-clipboard-check" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal" data-delay="1">
+        <div class="blog-img" style="background:linear-gradient(135deg,#064e3b,#065f46);">
+          <i class="fas fa-clipboard-check" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Enrolment</span>
+          <span class="blog-cat">Enrolment</span>
           <h3 class="blog-title">June 2025 Batch Enrolment Now Open</h3>
           <p class="blog-excerpt">Applications are now live for the June 2025 batch across all CA Foundation papers. Limited seats available — register early to secure your preferred mode.</p>
           <div class="blog-meta"><span>FA News · April 2025</span><span>Enrolment</span></div>
         </div>
       </div>
 
-      <!-- News 3 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#4a148c,#6a1b9a);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-laptop-code" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal" data-delay="2">
+        <div class="blog-img" style="background:linear-gradient(135deg,#3b0764,#4c1d95);">
+          <i class="fas fa-laptop-code" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Workshop</span>
+          <span class="blog-cat">Workshop</span>
           <h3 class="blog-title">Fintech Workshop: The Future of Finance</h3>
           <p class="blog-excerpt">Industry experts joined FA for an exclusive workshop on how financial technology is reshaping accounting, auditing and taxation for the next generation of CAs.</p>
           <div class="blog-meta"><span>FA Events · March 2025</span><span>Workshop</span></div>
         </div>
       </div>
 
-      <!-- News 4 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#b71c1c,#c62828);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-star" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal">
+        <div class="blog-img" style="background:linear-gradient(135deg,#7f1d1d,#991b1b);">
+          <i class="fas fa-star" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Ceremony</span>
+          <span class="blog-cat">Ceremony</span>
           <h3 class="blog-title">Annual Wall of Fame Felicitation 2024</h3>
           <p class="blog-excerpt">FA celebrated its top-performing students at the annual felicitation ceremony — recognising rank holders, distinction achievers and first-attempt champions.</p>
           <div class="blog-meta"><span>FA Events · January 2025</span><span>Ceremony</span></div>
         </div>
       </div>
 
-      <!-- News 5 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#1565c0,#1976d2);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-chalkboard-teacher" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal" data-delay="1">
+        <div class="blog-img" style="background:linear-gradient(135deg,#1e3a5f,#1e40af);">
+          <i class="fas fa-chalkboard-teacher" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Faculty</span>
+          <span class="blog-cat">Faculty</span>
           <h3 class="blog-title">3 New Expert Tutors Join FA Faculty</h3>
           <p class="blog-excerpt">FA welcomes three new specialist tutors bringing expertise in direct taxation, corporate law and advanced statistics to our growing faculty team.</p>
           <div class="blog-meta"><span>FA News · December 2024</span><span>Faculty</span></div>
         </div>
       </div>
 
-      <!-- News 6 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#2e7d32,#388e3c);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-book-open" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal" data-delay="2">
+        <div class="blog-img" style="background:linear-gradient(135deg,#14532d,#166534);">
+          <i class="fas fa-book-open" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Store</span>
+          <span class="blog-cat">Store</span>
           <h3 class="blog-title">Updated Study Materials Now in FA Store</h3>
           <p class="blog-excerpt">All four CA Foundation paper guides have been updated for the 2025 exam cycle. New editions are now available in the FA Store with expanded question sets.</p>
           <div class="blog-meta"><span>FA Store · November 2024</span><span>Materials</span></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-     WALL OF FAME
-     ════════════════════════════════════ -->
+<!-- Wall of Fame -->
 <section class="section bg-dark" id="wof">
   <div class="container">
-    <div class="section-header">
-      <div class="label">Our Champions</div>
-      <h2 class="section-title">Wall of <em class="text-gold italic">Fame</em></h2>
-      <p class="section-sub">These are the students who worked hardest, aimed highest, and made FA proud — rank holders, state toppers, and distinction achievers since inception.</p>
+    <div class="section-hd reveal">
+      <div class="label" style="margin-bottom:16px;">Our Champions</div>
+      <h2 style="font-size:clamp(2rem,4vw,3.5rem);color:var(--white);margin-bottom:16px;">Wall of <em style="color:var(--gold);">Fame</em></h2>
+      <p style="max-width:520px;">These are the students who worked hardest, aimed highest, and made FA proud — rank holders, state toppers, and distinction achievers since inception.</p>
     </div>
     <div class="wof-grid">
-
-      <div class="wof-card">
+      <div class="wof-card reveal">
         <div class="wof-rank">1</div>
         <div class="wof-name">Ananya Sharma</div>
         <div class="wof-program">CA Foundation</div>
         <div class="wof-score">AIR 12</div>
       </div>
-
-      <div class="wof-card">
+      <div class="wof-card reveal" data-delay="1">
         <div class="wof-rank">2</div>
         <div class="wof-name">Ravi Kumar</div>
         <div class="wof-program">CA Foundation</div>
         <div class="wof-score">State Topper</div>
       </div>
-
-      <div class="wof-card">
+      <div class="wof-card reveal" data-delay="2">
         <div class="wof-rank">3</div>
         <div class="wof-name">Priya Nair</div>
         <div class="wof-program">Professional Dev.</div>
         <div class="wof-score">Distinction</div>
       </div>
-
-      <div class="wof-card">
+      <div class="wof-card reveal" data-delay="3">
         <div class="wof-rank">4</div>
         <div class="wof-name">Suresh Babu</div>
         <div class="wof-program">CA Foundation</div>
         <div class="wof-score">All Distinctions</div>
       </div>
-
-      <div class="wof-card">
+      <div class="wof-card reveal" data-delay="4">
         <div class="wof-rank">5</div>
         <div class="wof-name">Meena Krishnan</div>
         <div class="wof-program">CA Foundation P1</div>
         <div class="wof-score">Top 5%</div>
       </div>
-
-      <div class="wof-card">
+      <div class="wof-card reveal">
         <div class="wof-rank">6</div>
         <div class="wof-name">Karthik Balan</div>
         <div class="wof-program">Professional Dev.</div>
         <div class="wof-score">First Attempt</div>
       </div>
-
-      <div class="wof-card">
+      <div class="wof-card reveal" data-delay="1">
         <div class="wof-rank">7</div>
         <div class="wof-name">Divya Menon</div>
         <div class="wof-program">Custom Coaching</div>
         <div class="wof-score">First Attempt</div>
       </div>
-
-      <div class="wof-card">
+      <div class="wof-card reveal" data-delay="2">
         <div class="wof-rank">8</div>
         <div class="wof-name">Vijay Shankar</div>
         <div class="wof-program">CA Foundation</div>
         <div class="wof-score">High Distinction</div>
       </div>
-
-      <div class="wof-card">
+      <div class="wof-card reveal" data-delay="3">
         <div class="wof-rank">9</div>
         <div class="wof-name">Lakshmi Priya</div>
         <div class="wof-program">CA Foundation P3</div>
         <div class="wof-score">100% Score</div>
       </div>
-
-      <div class="wof-card">
+      <div class="wof-card reveal" data-delay="4">
         <div class="wof-rank">10</div>
         <div class="wof-name">Arjun Nataraj</div>
         <div class="wof-program">CA Foundation</div>
         <div class="wof-score">AIR 45</div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-     ARTICLES
-     ════════════════════════════════════ -->
+<!-- Articles -->
 <section class="section bg-surface" id="articles">
   <div class="container">
-    <div class="section-header">
-      <div class="label">Knowledge Hub</div>
-      <h2 class="section-title">Expert Articles &amp;<br><em class="text-gold italic">Insights</em></h2>
-      <p class="section-sub">Expert-written content on finance careers, exam strategy and industry trends — published regularly by the FA faculty.</p>
+    <div class="section-hd reveal">
+      <div class="label" style="margin-bottom:16px;">Knowledge Hub</div>
+      <h2 style="font-size:clamp(2rem,4vw,3.5rem);color:var(--white);margin-bottom:16px;">Expert Articles &amp; <em style="color:var(--gold);">Insights</em></h2>
+      <p style="max-width:520px;">Expert-written content on finance careers, exam strategy and industry trends — published regularly by the FA faculty.</p>
     </div>
     <div class="blog-grid">
-
-      <!-- Article 1 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#7c3aed,#4f46e5);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-file-invoice-dollar" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal">
+        <div class="blog-img" style="background:linear-gradient(135deg,#312e81,#4338ca);">
+          <i class="fas fa-file-invoice-dollar" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">CA Foundation</span>
+          <span class="blog-cat">CA Foundation</span>
           <h3 class="blog-title">How to Clear CA Foundation in Your First Attempt</h3>
           <p class="blog-excerpt">A comprehensive strategy guide covering preparation timelines, subject prioritisation and the most effective study techniques used by FA toppers over the years.</p>
           <div class="blog-meta"><span>FA Editorial · May 2025</span><span>5 min read</span></div>
         </div>
       </div>
 
-      <!-- Article 2 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#059669,#0d9488);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-chart-line" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal" data-delay="1">
+        <div class="blog-img" style="background:linear-gradient(135deg,#064e3b,#065f46);">
+          <i class="fas fa-chart-line" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Career</span>
+          <span class="blog-cat">Career</span>
           <h3 class="blog-title">Top Finance Career Paths After CA Foundation</h3>
           <p class="blog-excerpt">Explore the diverse and rewarding career opportunities that open up once you clear your CA Foundation — from audit and taxation to investment banking.</p>
           <div class="blog-meta"><span>FA Editorial · April 2025</span><span>4 min read</span></div>
         </div>
       </div>
 
-      <!-- Article 3 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#dc2626,#ea580c);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-microchip" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal" data-delay="2">
+        <div class="blog-img" style="background:linear-gradient(135deg,#7f1d1d,#991b1b);">
+          <i class="fas fa-microchip" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Fintech</span>
+          <span class="blog-cat">Fintech</span>
           <h3 class="blog-title">The Rise of Fintech: What Finance Students Must Know</h3>
           <p class="blog-excerpt">How financial technology is reshaping accounting, auditing and taxation — and what it means for the next generation of CA professionals entering the field.</p>
           <div class="blog-meta"><span>FA Editorial · March 2025</span><span>6 min read</span></div>
         </div>
       </div>
 
-      <!-- Article 4 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#1565c0,#1976d2);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-calculator" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal">
+        <div class="blog-img" style="background:linear-gradient(135deg,#1e3a5f,#1e40af);">
+          <i class="fas fa-calculator" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Study Tips</span>
-          <h3 class="blog-title">Mastering Business Mathematics for CA Foundation Paper 3</h3>
+          <span class="blog-cat">Study Tips</span>
+          <h3 class="blog-title">Mastering Business Maths for CA Foundation Paper 3</h3>
           <p class="blog-excerpt">Break down the mathematics syllabus with FA's structured approach — formulas, shortcuts, common traps and the practice routines that produce distinction holders.</p>
           <div class="blog-meta"><span>FA Editorial · February 2025</span><span>3 min read</span></div>
         </div>
       </div>
 
-      <!-- Article 5 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#004d40,#00695c);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-balance-scale" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal" data-delay="1">
+        <div class="blog-img" style="background:linear-gradient(135deg,#064e3b,#065f46);">
+          <i class="fas fa-balance-scale" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Law</span>
+          <span class="blog-cat">Law</span>
           <h3 class="blog-title">Business Laws Made Simple: A Student's Guide to Paper 2</h3>
           <p class="blog-excerpt">Demystifying the legal framework of CA Foundation Paper 2 — acts, provisions, case principles and correspondence explained clearly for exam readiness.</p>
           <div class="blog-meta"><span>FA Editorial · January 2025</span><span>5 min read</span></div>
         </div>
       </div>
 
-      <!-- Article 6 -->
-      <div class="blog-card">
-        <div class="blog-img-wrap" style="background:linear-gradient(135deg,#b71c1c,#c62828);display:flex;align-items:center;justify-content:center;">
-          <i class="fas fa-landmark" style="font-size:2.8rem;color:rgba(255,255,255,.15);"></i>
+      <div class="blog-card reveal" data-delay="2">
+        <div class="blog-img" style="background:linear-gradient(135deg,#7f1d1d,#991b1b);">
+          <i class="fas fa-landmark" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-category">Economics</span>
+          <span class="blog-cat">Economics</span>
           <h3 class="blog-title">Understanding Macroeconomics for CA Foundation Paper 4</h3>
           <p class="blog-excerpt">From GDP and fiscal policy to international trade — a structured guide to the macroeconomic concepts that make up the bulk of Paper 4's Business Economics syllabus.</p>
           <div class="blog-meta"><span>FA Editorial · December 2024</span><span>4 min read</span></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ════════════════════════════════════
-     CTA
-     ════════════════════════════════════ -->
-<div style="padding:80px 0;">
-  <section class="cta-section">
-    <div class="container">
-      <div class="label" style="justify-content:center;margin-bottom:24px;">Ready to Begin?</div>
-      <h2 class="cta-title">Begin Your<br><em>Finance Journey</em><br>with FA Today.</h2>
-      <p class="cta-desc">Join 500+ students who have trusted FA – the Finance Academy for their path to a successful finance career, right here in Hosur.</p>
-      <div class="cta-actions">
-        <a href="programs.html" class="btn btn-primary btn-magnetic">Explore Programs &nbsp;<i class="fas fa-arrow-right"></i></a>
-        <a href="contact.html" class="btn btn-outline">Call +91 8098-301-702</a>
-      </div>
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="label" style="justify-content:center;margin-bottom:24px;">Ready to Begin?</div>
+    <h2 class="cta-title">Begin Your Finance Journey<br>with FA Today.</h2>
+    <p class="cta-sub">Join 500+ students who have trusted FA – the Finance Academy for their path to a successful finance career, right here in Hosur.</p>
+    <div class="cta-actions">
+      <a href="programs.html" class="btn-cta-dark">Explore Programs &nbsp;<i class="fas fa-arrow-right"></i></a>
+      <a href="contact.html" class="btn-cta-outline">Call +91 8098-301-702</a>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 
-<!-- Footer -->
 <footer>
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo" style="margin-bottom:0;">
-          <div class="nav-logo-mark">FA</div>Finance <span>Academy</span>
-        </a>
-        <p>F.A. – the Finance Academy. 26 programs, 9 modes, 500+ students, 100+ winners. Hosur's most trusted finance institution.</p>
-        <div class="footer-socials">
-          <a href="#" class="footer-social"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-youtube"></i></a>
-          <a href="https://wa.me/918098301702" class="footer-social"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
+        <div class="footer-brand-name">Finance <span>Academy</span></div>
+        <p>FA – the Finance Academy. 26 programs, 9 modes, 500+ students, 100+ winners. Hosur's most trusted finance institution.</p>
+        <div class="f-socials">
+          <a href="#" class="f-social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/918098301702" class="f-social"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Navigation</div>
+      <div>
+        <span class="footer-col-title">Navigation</span>
         <div class="footer-links">
           <a href="index.html" class="footer-link">Home</a>
           <a href="about.html" class="footer-link">We Are FA</a>
@@ -527,8 +343,8 @@
           <a href="contact.html" class="footer-link">Contact</a>
         </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Programs</div>
+      <div>
+        <span class="footer-col-title">Programs</span>
         <div class="footer-links">
           <a href="programs.html" class="footer-link">CA Foundation Paper 1</a>
           <a href="programs.html" class="footer-link">CA Foundation Paper 2</a>
@@ -538,8 +354,8 @@
           <a href="programs.html" class="footer-link">Custom Coaching</a>
         </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Contact</div>
+      <div>
+        <span class="footer-col-title">Contact</span>
         <div class="footer-links">
           <a href="tel:+918098301702" class="footer-link">+91 8098-301-702</a>
           <a href="tel:+918098301703" class="footer-link">+91 8098-301-703</a>
@@ -556,11 +372,9 @@
   </div>
 </footer>
 
+<a href="https://wa.me/918098301702" id="wa-float" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 <a href="#" id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
-<a href="https://wa.me/918098301702" id="wa-float" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
