@@ -1,0 +1,312 @@
+# PagesCMS configuration for FA – Finance Academy
+# Docs: https://pagescms.org/docs
+# Connect at: https://app.pagescms.org
+
+media:
+  input: assets/images
+  output: /assets/images
+
+content:
+
+  # ── Site-wide settings ──────────────────────────────────
+  - name: settings
+    label: Site Settings
+    path: content/settings.json
+    type: file
+    fields:
+      - name: exam_date
+        label: "Next CA Exam Date (YYYY-MM-DD)"
+        type: string
+        description: "Used for the countdown banner on the homepage"
+      - name: stats_students
+        label: "Students Enrolled (number)"
+        type: number
+      - name: stats_programs
+        label: "Total Programs"
+        type: number
+      - name: stats_tutors
+        label: "Expert Tutors"
+        type: number
+      - name: stats_winners
+        label: "Rank Winners"
+        type: number
+      - name: stats_questions
+        label: "Question Bank Items"
+        type: number
+      - name: phone_primary
+        label: Primary Phone
+        type: string
+      - name: phone_secondary
+        label: Secondary Phone
+        type: string
+      - name: email
+        label: Email Address
+        type: string
+      - name: address
+        label: Full Address
+        type: text
+      - name: hours
+        label: Business Hours
+        type: string
+      - name: whatsapp_number
+        label: "WhatsApp Number (with country code, no +)"
+        type: string
+
+  # ── Courses ─────────────────────────────────────────────
+  - name: courses
+    label: Courses & Programs
+    path: content/courses.json
+    type: file
+    fields:
+      - name: items
+        label: Course List
+        type: array
+        fields:
+          - name: id
+            label: ID (slug, no spaces)
+            type: string
+          - name: title
+            label: Course Title
+            type: string
+          - name: category
+            label: Category
+            type: select
+            options:
+              values:
+                - label: CA Foundation
+                  value: ca
+                - label: CA Intermediate
+                  value: inter
+                - label: CA Final
+                  value: inter
+                - label: Computing
+                  value: computing
+                - label: Professional
+                  value: pro
+                - label: Custom Coaching
+                  value: custom
+          - name: description
+            label: Short Description
+            type: text
+          - name: price
+            label: "Price (₹, 0 = Enquire)"
+            type: number
+          - name: duration
+            label: "Duration (e.g. 6 Months)"
+            type: string
+          - name: hours
+            label: "Total Hours (number)"
+            type: number
+          - name: lessons
+            label: "Number of Lessons"
+            type: number
+          - name: level
+            label: Level
+            type: select
+            options:
+              values:
+                - label: Beginner
+                  value: beginner
+                - label: Intermediate
+                  value: intermediate
+                - label: Advanced
+                  value: advanced
+          - name: featured
+            label: Featured (spans 2 rows on homepage)
+            type: boolean
+          - name: image
+            label: Course Cover Image
+            type: image
+            description: "Optional. Displayed at top of course card."
+
+  # ── Store Products ───────────────────────────────────────
+  - name: store
+    label: Store Products
+    path: content/store.json
+    type: file
+    fields:
+      - name: items
+        label: Products
+        type: array
+        fields:
+          - name: id
+            label: ID (slug, no spaces)
+            type: string
+          - name: name
+            label: Product Name
+            type: string
+          - name: category
+            label: Category
+            type: select
+            options:
+              values:
+                - label: Books
+                  value: books
+                - label: Question Banks
+                  value: qbank
+                - label: Study Kits
+                  value: kits
+          - name: description
+            label: Short Description
+            type: text
+          - name: price
+            label: "Price (₹)"
+            type: number
+          - name: badge
+            label: "Badge (e.g. Bestseller, New, Top Pick)"
+            type: string
+          - name: badge_color
+            label: Badge Color
+            type: select
+            options:
+              values:
+                - label: Gold
+                  value: gold
+                - label: Green
+                  value: green
+                - label: Teal
+                  value: teal
+          - name: buy_link
+            label: "Buy / Enquire Link (URL or contact.html)"
+            type: string
+          - name: image
+            label: Product Image
+            type: image
+            description: "Optional. Displayed as product thumbnail."
+
+  # ── Team / Faculty ───────────────────────────────────────
+  - name: team
+    label: Faculty & Tutors
+    path: content/team.json
+    type: file
+    fields:
+      - name: core
+        label: Core Faculty
+        type: array
+        fields:
+          - name: name
+            label: Full Name
+            type: string
+          - name: qualifications
+            label: "Qualifications (e.g. B.Com, FCA)"
+            type: string
+          - name: subjects
+            label: "Subjects Taught"
+            type: string
+          - name: experience
+            label: "Experience (e.g. 25 years)"
+            type: string
+          - name: bio
+            label: Short Bio
+            type: text
+          - name: photo
+            label: Photo
+            type: image
+      - name: visiting
+        label: Visiting Faculty
+        type: array
+        fields:
+          - name: name
+            label: Full Name
+            type: string
+          - name: qualifications
+            label: Qualifications
+            type: string
+          - name: specialty
+            label: Specialty / Subject
+            type: string
+          - name: photo
+            label: Photo
+            type: image
+
+  # ── Testimonials ────────────────────────────────────────
+  - name: testimonials
+    label: Student Testimonials
+    path: content/testimonials.json
+    type: file
+    fields:
+      - name: items
+        label: Testimonials
+        type: array
+        fields:
+          - name: name
+            label: Student Name
+            type: string
+          - name: course
+            label: "Course / Batch (e.g. CA Foundation 2024)"
+            type: string
+          - name: quote
+            label: Testimonial Text
+            type: text
+          - name: achievement
+            label: "Achievement (e.g. State Topper)"
+            type: string
+          - name: featured
+            label: Show on Homepage
+            type: boolean
+          - name: photo
+            label: Student Photo
+            type: image
+            description: "Optional. Shows as avatar. If missing, initials are used."
+
+  # ── News & Events ────────────────────────────────────────
+  - name: news
+    label: News & Events
+    path: content/news.json
+    type: file
+    fields:
+      - name: items
+        label: News Items
+        type: array
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: date
+            label: "Date (Month Year)"
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: category
+            label: Category
+            type: select
+            options:
+              values:
+                - label: Event
+                  value: event
+                - label: Achievement
+                  value: achievement
+                - label: Launch
+                  value: launch
+          - name: image
+            label: Event Photo
+            type: image
+            description: "Optional. Shown in the news timeline card."
+
+  # ── Wall of Fame ─────────────────────────────────────────
+  - name: walloffame
+    label: Wall of Fame
+    path: content/walloffame.json
+    type: file
+    fields:
+      - name: items
+        label: Winners
+        type: array
+        fields:
+          - name: name
+            label: Student Name
+            type: string
+          - name: program
+            label: "Program (e.g. CA Foundation 2024)"
+            type: string
+          - name: score
+            label: "Score / Rank"
+            type: string
+          - name: year
+            label: Year
+            type: number
+          - name: photo
+            label: Student Photo
+            type: image
+            description: "Optional. Displayed on the Wall of Fame card."
