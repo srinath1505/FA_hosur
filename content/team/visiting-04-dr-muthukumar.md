@@ -1,0 +1,6 @@
+---
+name: "Dr. Muthukumar"
+qualifications: "PhD (Commerce)"
+specialty: "Business Economics"
+faculty_type: "visiting"
+---

@@ -1,0 +1,13 @@
+---
+id: "ca-foundation-level-1"
+title: "CA Foundation Level 1 — for Class 11"
+category: "ca"
+description: "Start your CA journey from Class 11. This early-start program builds a significant head-start on the Foundation syllabus before students even complete school."
+price: 15000
+duration: "8 Months"
+hours: 150
+lessons: 14
+level: "beginner"
+featured: false
+image: ""
+---

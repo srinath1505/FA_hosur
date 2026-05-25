@@ -1,0 +1,6 @@
+---
+title: "AMBI-LEARN Sanskrit Initiative"
+date: "Jun 2023"
+description: "FA launched the AMBI-LEARN Sanskrit program as part of its commitment to holistic education — connecting students to India's intellectual heritage alongside professional finance training."
+category: "launch"
+---

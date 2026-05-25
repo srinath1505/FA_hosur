@@ -26,7 +26,6 @@ content:
     label: Courses & Programs
     path: content/courses
     type: collection
-    format: json
     view:
       fields: [title, category, price]
     fields:
@@ -62,7 +61,6 @@ content:
     label: Store Products
     path: content/store
     type: collection
-    format: json
     view:
       fields: [name, category, price]
     fields:
@@ -93,7 +91,6 @@ content:
     label: Faculty & Tutors
     path: content/team
     type: collection
-    format: json
     view:
       fields: [name, faculty_type, subjects]
     fields:
@@ -116,7 +113,6 @@ content:
     label: Student Testimonials
     path: content/testimonials
     type: collection
-    format: json
     view:
       fields: [name, course, achievement]
     fields:
@@ -131,7 +127,6 @@ content:
     label: News & Events
     path: content/news
     type: collection
-    format: json
     view:
       fields: [title, date, category]
     fields:
@@ -152,7 +147,6 @@ content:
     label: Wall of Fame
     path: content/walloffame
     type: collection
-    format: json
     view:
       fields: [name, program, score, year]
     fields:

@@ -1,0 +1,7 @@
+---
+name: "Subiksha"
+course: "Tally Level 1"
+quote: "Tally made easy — very high energy classes. The practical lab sessions made me workplace-ready by the time I finished. Got placed within a month of completing the course."
+achievement: "Placed within 1 month of course completion"
+featured: true
+---

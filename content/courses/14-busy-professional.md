@@ -1,0 +1,13 @@
+---
+id: "busy-professional"
+title: "Busy: Professional"
+category: "computing"
+description: "Master Busy accounting software at the professional level. Full GST, payroll, inventory and reporting — essential for accounting roles across Tamil Nadu."
+price: 10000
+duration: "3 Months"
+hours: 100
+lessons: 151
+level: "intermediate"
+featured: false
+image: ""
+---

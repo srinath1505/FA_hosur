@@ -1,0 +1,13 @@
+---
+id: "ca-foundation-regular"
+title: "CA Foundation — Regular Batch"
+category: "ca"
+description: "All four Foundation papers in one comprehensive batch. Structured weekly schedule, regular tests, and full FA study material included. Best suited for focused full-time preparation."
+price: 30000
+duration: "6 Months"
+hours: 0
+lessons: 0
+level: "intermediate"
+featured: false
+image: ""
+---

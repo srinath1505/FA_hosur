@@ -1,0 +1,11 @@
+---
+id: "ca-foundation-paper-1-guide"
+name: "CA Foundation Paper 1 Accounting Guide"
+category: "books"
+description: "FA's definitive accounting guide for Paper 1. Covers principles, journal entries, final accounts and more — with solved examples throughout."
+price: 350
+badge: "Bestseller"
+badge_color: "gold"
+buy_link: "contact.html"
+image: ""
+---

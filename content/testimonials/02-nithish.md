@@ -1,0 +1,7 @@
+---
+name: "Nithish"
+course: "CA Inter, 2020"
+quote: "FA helped me gain valuable experiences beyond just academics — the sessions on life, leadership, and charity shaped who I am today as much as the coursework did."
+achievement: "CA Inter Cleared"
+featured: true
+---
