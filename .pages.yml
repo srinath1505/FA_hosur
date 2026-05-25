@@ -26,6 +26,7 @@ content:
     label: Courses & Programs
     path: content/courses
     type: collection
+    format: json
     view:
       fields: [title, category, price]
     fields:
@@ -61,6 +62,7 @@ content:
     label: Store Products
     path: content/store
     type: collection
+    format: json
     view:
       fields: [name, category, price]
     fields:
@@ -70,9 +72,9 @@ content:
         type: select
         options:
           values:
-            - { label: Books,           value: books  }
-            - { label: "Question Banks", value: qbank }
-            - { label: "Study Kits",    value: kits   }
+            - { label: Books,            value: books  }
+            - { label: "Question Banks", value: qbank  }
+            - { label: "Study Kits",     value: kits   }
       - { name: description, label: "Short Description",          type: text    }
       - { name: price,       label: "Price in ₹",                type: number  }
       - { name: badge,       label: "Badge (e.g. Bestseller, New, Top Pick)", type: string }
@@ -91,10 +93,11 @@ content:
     label: Faculty & Tutors
     path: content/team
     type: collection
+    format: json
     view:
       fields: [name, faculty_type, subjects]
     fields:
-      - { name: name,           label: "Full Name",                          type: string }
+      - { name: name,           label: "Full Name",                         type: string }
       - name: faculty_type
         label: Faculty Type
         type: select
@@ -102,37 +105,39 @@ content:
           values:
             - { label: "Core Faculty",     value: core     }
             - { label: "Visiting Faculty", value: visiting }
-      - { name: qualifications, label: "Qualifications (e.g. B.Com, FCA)",  type: string }
-      - { name: subjects,       label: "Subjects Taught",                    type: string }
-      - { name: specialty,      label: "Specialty (visiting faculty only)",  type: string }
-      - { name: experience,     label: "Experience (e.g. 10 years)",         type: string }
-      - { name: bio,            label: "Short Bio",                          type: text   }
-      - { name: photo,          label: "Photo",                              type: image  }
+      - { name: qualifications, label: "Qualifications (e.g. B.Com, FCA)", type: string }
+      - { name: subjects,       label: "Subjects Taught",                   type: string }
+      - { name: specialty,      label: "Specialty (visiting only)",         type: string }
+      - { name: experience,     label: "Experience (e.g. 10 years)",        type: string }
+      - { name: bio,            label: "Short Bio",                         type: text   }
+      - { name: photo,          label: "Photo",                             type: image  }
 
   - name: testimonials
     label: Student Testimonials
     path: content/testimonials
     type: collection
+    format: json
     view:
       fields: [name, course, achievement]
     fields:
-      - { name: name,        label: "Student Name",       type: string  }
-      - { name: course,      label: "Course / Batch",     type: string  }
-      - { name: quote,       label: "Testimonial Text",   type: text    }
-      - { name: achievement, label: "Achievement",        type: string  }
-      - { name: featured,    label: "Show on Homepage",   type: boolean }
-      - { name: photo,       label: "Student Photo",      type: image   }
+      - { name: name,        label: "Student Name",     type: string  }
+      - { name: course,      label: "Course / Batch",   type: string  }
+      - { name: quote,       label: "Testimonial Text", type: text    }
+      - { name: achievement, label: "Achievement",      type: string  }
+      - { name: featured,    label: "Show on Homepage", type: boolean }
+      - { name: photo,       label: "Student Photo",    type: image   }
 
   - name: news
     label: News & Events
     path: content/news
     type: collection
+    format: json
     view:
       fields: [title, date, category]
     fields:
-      - { name: title,       label: "Title",              type: string }
+      - { name: title,       label: "Title",                type: string }
       - { name: date,        label: "Date (e.g. May 2024)", type: string }
-      - { name: description, label: "Description",        type: text   }
+      - { name: description, label: "Description",          type: text   }
       - name: category
         label: Category
         type: select
@@ -141,17 +146,18 @@ content:
             - { label: Event,       value: event       }
             - { label: Achievement, value: achievement }
             - { label: Launch,      value: launch      }
-      - { name: image,       label: "Event Photo",        type: image  }
+      - { name: image,       label: "Event Photo",          type: image  }
 
   - name: walloffame
     label: Wall of Fame
     path: content/walloffame
     type: collection
+    format: json
     view:
       fields: [name, program, score, year]
     fields:
-      - { name: name,    label: "Student Name",  type: string }
-      - { name: program, label: "Program",        type: string }
-      - { name: score,   label: "Score / Rank",  type: string }
-      - { name: year,    label: "Year",           type: number }
-      - { name: photo,   label: "Student Photo",  type: image  }
+      - { name: name,    label: "Student Name", type: string }
+      - { name: program, label: "Program",       type: string }
+      - { name: score,   label: "Score / Rank", type: string }
+      - { name: year,    label: "Year",          type: number }
+      - { name: photo,   label: "Student Photo", type: image  }
