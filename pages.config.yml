@@ -60,7 +60,7 @@ content:
     fields:
       - name: items
         label: Course List
-        type: array
+        type: list
         fields:
           - name: id
             label: ID (slug, no spaces)
@@ -127,7 +127,7 @@ content:
     fields:
       - name: items
         label: Products
-        type: array
+        type: list
         fields:
           - name: id
             label: ID (slug, no spaces)
@@ -182,7 +182,7 @@ content:
     fields:
       - name: core
         label: Core Faculty
-        type: array
+        type: list
         fields:
           - name: name
             label: Full Name
@@ -204,7 +204,7 @@ content:
             type: image
       - name: visiting
         label: Visiting Faculty
-        type: array
+        type: list
         fields:
           - name: name
             label: Full Name
@@ -227,7 +227,7 @@ content:
     fields:
       - name: items
         label: Testimonials
-        type: array
+        type: list
         fields:
           - name: name
             label: Student Name
@@ -257,7 +257,7 @@ content:
     fields:
       - name: items
         label: News Items
-        type: array
+        type: list
         fields:
           - name: title
             label: Title
@@ -292,7 +292,7 @@ content:
     fields:
       - name: items
         label: Winners
-        type: array
+        type: list
         fields:
           - name: name
             label: Student Name
