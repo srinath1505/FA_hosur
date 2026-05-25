@@ -7,7 +7,7 @@
   <meta name="description" content="Hosur's most trusted Finance Academy. CA Foundation coaching, professional finance programs — 26 courses, 9 modes, 500+ students, 100+ winners." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
   <link rel="stylesheet" href="css/style.css" />
@@ -17,6 +17,7 @@
 <!-- ── Loader ── -->
 <div id="loader">
   <div class="loader-text">FA</div>
+  <div class="loader-sub">Finance Academy — Hosur</div>
   <div class="loader-line"></div>
 </div>
 
@@ -55,9 +56,10 @@
      HERO
      ════════════════════════════════════ -->
 <section id="hero">
+  <div class="hero-orb" aria-hidden="true"></div>
   <div class="hero-left">
     <div class="hero-eyebrow reveal">
-      <span class="label">Finance Courses for All of You — Hosur</span>
+      <span class="label">Hosur's Premier Finance Academy</span>
     </div>
     <h1 class="hero-title reveal" data-delay="1">
       Shape Your<br>
@@ -116,6 +118,16 @@
     <div class="ticker-item"><span class="ticker-dot"></span>20+ Expert Tutors</div>
     <div class="ticker-item"><span class="ticker-dot"></span>CA Foundation Specialists</div>
     <div class="ticker-item"><span class="ticker-dot"></span>Hosur's Premier Finance Academy</div>
+  </div>
+</div>
+
+<!-- ── Exam Countdown ── -->
+<div class="countdown-strip">
+  <div class="countdown-inner">
+    <span class="countdown-label">CA Foundation Nov 2026 Exam</span>
+    <span class="countdown-days" id="exam-days" data-date="2026-11-15">—</span>
+    <span class="countdown-label">days away</span>
+    <a href="programs.html" class="countdown-cta">Start Preparing</a>
   </div>
 </div>
 
@@ -328,9 +340,9 @@
       <!-- Event 1 — left -->
       <div class="tl-left reveal-left">
         <div class="tl-card">
-          <span class="tl-year">May 2025</span>
-          <div class="tl-title">Outstanding May 2025 CA Results</div>
-          <p class="tl-desc">FA students achieve record results — 12 students placed in the All India Top 100 ranks for the May 2025 CA Foundation examinations.</p>
+          <span class="tl-year">May 2024</span>
+          <div class="tl-title">FA Receives Tally Empanelment Certificate</div>
+          <p class="tl-desc">FA is officially recognised as a Tally-certified institution — students can now earn industry-standard Tally credentials alongside their finance studies.</p>
         </div>
       </div>
       <div class="tl-center"><div class="tl-node">01</div></div>
@@ -341,18 +353,18 @@
       <div class="tl-center"><div class="tl-node">02</div></div>
       <div class="tl-right reveal-right">
         <div class="tl-card">
-          <span class="tl-year">April 2025</span>
-          <div class="tl-title">June 2025 Batch — Enrolment Open</div>
-          <p class="tl-desc">Applications are live for all CA Foundation papers. Limited seats across all 9 learning modes — register early to secure your preferred batch.</p>
+          <span class="tl-year">Sep 2023</span>
+          <div class="tl-title">FABLE — FA's Question Bank, First Launch</div>
+          <p class="tl-desc">FA launches FABLE, its proprietary 10,000+ question practice platform, giving students unlimited access to exam-pattern questions across all subjects.</p>
         </div>
       </div>
 
       <!-- Event 3 — left -->
       <div class="tl-left reveal-left">
         <div class="tl-card">
-          <span class="tl-year">March 2025</span>
-          <div class="tl-title">Fintech Workshop: The Future of Finance</div>
-          <p class="tl-desc">Industry experts at FA's exclusive workshop discuss how financial technology is reshaping accounting, auditing and taxation for CA professionals.</p>
+          <span class="tl-year">Jun 2023</span>
+          <div class="tl-title">AMBI-LEARN Sanskrit Programme Begins</div>
+          <p class="tl-desc">FA expands its learning initiatives with AMBI-LEARN Sanskrit — a unique interdisciplinary programme bridging classical education with modern finance thinking.</p>
         </div>
       </div>
       <div class="tl-center"><div class="tl-node">03</div></div>
@@ -363,9 +375,9 @@
       <div class="tl-center"><div class="tl-node">04</div></div>
       <div class="tl-right reveal-right">
         <div class="tl-card">
-          <span class="tl-year">January 2025</span>
-          <div class="tl-title">Annual Wall of Fame Ceremony 2024</div>
-          <p class="tl-desc">FA honoured its top-performing students at the annual felicitation — celebrating rank holders, distinction achievers and first-attempt champions.</p>
+          <span class="tl-year">Sep 2022</span>
+          <div class="tl-title">Authors' Day — Celebrating FA's Own Books</div>
+          <p class="tl-desc">FA's annual Authors' Day celebrates the tutors and students who contribute to its proprietary publishing house — the source of material that has built over 100 rank holders.</p>
         </div>
       </div>
     </div>
@@ -388,12 +400,12 @@
 
     <div class="testimonial-block reveal">
       <span class="testimonial-quote">"</span>
-      <p class="testimonial-text" id="tText">"Finance Academy transformed my understanding of accounting. I went from struggling to scoring in the top 5% of my batch — in a single semester."</p>
+      <p class="testimonial-text" id="tText">"Very high energy classes — the way concepts are explained at FA is unlike anything I experienced before. I cleared Tally Level 1 in my very first attempt."</p>
       <div class="testimonial-author">
-        <div class="t-avatar" id="tInitial">M</div>
+        <div class="t-avatar" id="tInitial">S</div>
         <div>
-          <div class="t-name" id="tName">Meena Krishnan</div>
-          <div class="t-role" id="tRole">CA Foundation, 2024</div>
+          <div class="t-name" id="tName">Subiksha</div>
+          <div class="t-role" id="tRole">Tally Level 1 — Finance Academy, Hosur</div>
         </div>
       </div>
       <div class="t-nav">
@@ -408,34 +420,34 @@
     <div class="reviews-grid">
       <div class="review-card reveal">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"The question bank of 10,000+ questions is FA's secret weapon. Practicing every type left nothing to surprise me in the exam hall. Cleared with distinction."</p>
+        <p class="review-text">"The real-life examples and professional development sessions at FA gave me an edge I didn't expect from a coaching class. Cleared CA Inter — this place is different."</p>
         <div class="review-author">
-          <div class="review-avatar">R</div>
+          <div class="review-avatar">N</div>
           <div>
-            <div class="review-name">Ravi Kumar</div>
-            <div class="review-role">State Topper — Tamil Nadu</div>
+            <div class="review-name">Nithish</div>
+            <div class="review-role">CA Inter, 2020 — Finance Academy</div>
           </div>
         </div>
       </div>
       <div class="review-card reveal" data-delay="1">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"The custom coaching plan at FA was transformative. My mentor addressed every weakness systematically. Cleared in the first attempt — exactly as planned."</p>
+        <p class="review-text">"FA's teaching style and the engagement opportunities in every session made me genuinely look forward to class. Cleared CA Foundation — exactly as I planned."</p>
         <div class="review-author">
-          <div class="review-avatar">D</div>
+          <div class="review-avatar">S</div>
           <div>
-            <div class="review-name">Divya Menon</div>
-            <div class="review-role">Custom Coaching, 2025</div>
+            <div class="review-name">Sasivarman</div>
+            <div class="review-role">CA Foundation, 2024 — Finance Academy</div>
           </div>
         </div>
       </div>
       <div class="review-card reveal" data-delay="2">
         <div class="review-stars">★★★★★</div>
-        <p class="review-text">"FA's published material is far superior to any generic textbook. Concise, accurate, exam-focused. Scoring distinction across all four papers felt genuinely achievable."</p>
+        <p class="review-text">"The regular tests and focus sessions at FA built my confidence like nothing else. I walked into the exam hall calm and walked out cleared — first attempt."</p>
         <div class="review-author">
-          <div class="review-avatar">S</div>
+          <div class="review-avatar">V</div>
           <div>
-            <div class="review-name">Suresh Babu</div>
-            <div class="review-role">Distinction — All Papers, 2024</div>
+            <div class="review-name">Vikram</div>
+            <div class="review-role">CA Foundation, 2024 — Finance Academy</div>
           </div>
         </div>
       </div>
@@ -455,36 +467,36 @@
     </div>
     <div class="blog-grid">
       <div class="blog-card reveal">
-        <div class="blog-img" style="background:linear-gradient(135deg,#312e81,#4338ca);">
-          <i class="fas fa-file-invoice-dollar" style="color:rgba(255,255,255,.2);"></i>
+        <div class="blog-img" style="background:linear-gradient(135deg,#78350f,#b45309);">
+          <i class="fas fa-chalkboard-teacher" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-cat">CA Foundation</span>
-          <h3 class="blog-title">How to Clear CA Foundation in Your First Attempt</h3>
-          <p class="blog-excerpt">A comprehensive strategy guide covering preparation timelines, subject prioritization and study techniques used by FA toppers.</p>
-          <div class="blog-meta"><span>FA Editorial · May 2025</span><span>5 min read</span></div>
+          <span class="blog-cat">Education</span>
+          <h3 class="blog-title">Igniting Passion: The Transformative Role of Teachers in Shaping Careers</h3>
+          <p class="blog-excerpt">How great teachers at FA go beyond the syllabus to ignite genuine curiosity and lasting confidence in every student they teach.</p>
+          <div class="blog-meta"><span>FA Editorial · 2024</span><span>5 min read</span></div>
         </div>
       </div>
       <div class="blog-card reveal" data-delay="1">
-        <div class="blog-img" style="background:linear-gradient(135deg,#064e3b,#065f46);">
-          <i class="fas fa-chart-line" style="color:rgba(255,255,255,.2);"></i>
+        <div class="blog-img" style="background:linear-gradient(135deg,#1e3a5f,#1e5f8a);">
+          <i class="fas fa-lightbulb" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-cat">Career</span>
-          <h3 class="blog-title">Top Finance Career Paths After CA Foundation</h3>
-          <p class="blog-excerpt">Explore the diverse and rewarding career opportunities that open up once you clear your CA Foundation — from audit to investment banking.</p>
-          <div class="blog-meta"><span>FA Editorial · April 2025</span><span>4 min read</span></div>
+          <span class="blog-cat">Philosophy</span>
+          <h3 class="blog-title">What Is Education? A View from FA's Faculty</h3>
+          <p class="blog-excerpt">FA's tutors reflect on what real education means — beyond marks and degrees — and why a finance education should prepare students for life, not just exams.</p>
+          <div class="blog-meta"><span>FA Editorial · 2023</span><span>4 min read</span></div>
         </div>
       </div>
       <div class="blog-card reveal" data-delay="2">
-        <div class="blog-img" style="background:linear-gradient(135deg,#7f1d1d,#991b1b);">
-          <i class="fas fa-laptop-code" style="color:rgba(255,255,255,.2);"></i>
+        <div class="blog-img" style="background:linear-gradient(135deg,#14532d,#166534);">
+          <i class="fas fa-users" style="color:rgba(255,255,255,.2);"></i>
         </div>
         <div class="blog-body">
-          <span class="blog-cat">Fintech</span>
-          <h3 class="blog-title">The Rise of Fintech: What Every Finance Student Must Know</h3>
-          <p class="blog-excerpt">How financial technology is reshaping accounting, auditing and taxation — and what it means for the next generation of CA professionals.</p>
-          <div class="blog-meta"><span>FA Editorial · March 2025</span><span>6 min read</span></div>
+          <span class="blog-cat">Leadership</span>
+          <h3 class="blog-title">Education Is About Creating Leaders for Tomorrow</h3>
+          <p class="blog-excerpt">How finance education at FA builds not just technically strong students, but the problem-solvers and decision-makers that industry and society need most.</p>
+          <div class="blog-meta"><span>FA Editorial · 2023</span><span>6 min read</span></div>
         </div>
       </div>
     </div>
@@ -566,58 +578,10 @@
 <a href="https://wa.me/918098301702" id="wa-float" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 <a href="#" id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
 
-<script src="js/main.js"></script>
-</body>
-</html>
-a>
-          <a href="https://wa.me/918098301702" class="footer-social"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="footer-social"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Navigation</div>
-        <div class="footer-links">
-          <a href="index.html" class="footer-link">Home</a>
-          <a href="about.html" class="footer-link">We Are FA</a>
-          <a href="programs.html" class="footer-link">Programs</a>
-          <a href="store.html" class="footer-link">FA Store</a>
-          <a href="lounge.html" class="footer-link">Lounge</a>
-          <a href="contact.html" class="footer-link">Contact</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Programs</div>
-        <div class="footer-links">
-          <a href="programs.html" class="footer-link">CA Foundation Paper 1</a>
-          <a href="programs.html" class="footer-link">CA Foundation Paper 2</a>
-          <a href="programs.html" class="footer-link">CA Foundation Paper 3</a>
-          <a href="programs.html" class="footer-link">CA Foundation Paper 4</a>
-          <a href="programs.html" class="footer-link">Professional Development</a>
-          <a href="programs.html" class="footer-link">Custom Coaching</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Contact</div>
-        <div class="footer-links">
-          <a href="tel:+918098301702" class="footer-link">+91 8098-301-702</a>
-          <a href="tel:+918098301703" class="footer-link">+91 8098-301-703</a>
-          <a href="mailto:supportfa@fahosur.com" class="footer-link">supportfa@fahosur.com</a>
-          <span class="footer-link" style="cursor:default;line-height:1.7;">S-2 Marutham Enclave, 2nd Floor<br>Gandhi Nagar, HUDCO<br>Hosur – 635109</span>
-          <span class="footer-link" style="cursor:default;">Mon – Sat &nbsp;9:00am – 6:00pm</span>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2025 FA – the Finance Academy. All rights reserved.</span>
-      <span>Hosur, Tamil Nadu &nbsp;·&nbsp; supportfa@fahosur.com</span>
-    </div>
-  </div>
-</footer>
-
-<!-- Float buttons -->
-<a href="https://wa.me/918098301702" id="wa-float" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-<a href="#" id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
-
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>gsap.registerPlugin(ScrollTrigger);</script>
 <script src="js/main.js"></script>
 </body>
 </html>

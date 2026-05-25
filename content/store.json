@@ -1,0 +1,92 @@
+{
+  "items": [
+    {
+      "id": "ca-foundation-paper-1-guide",
+      "name": "CA Foundation Paper 1 Accounting Guide",
+      "category": "books",
+      "description": "FA's definitive accounting guide for Paper 1. Covers principles, journal entries, final accounts and more — with solved examples throughout.",
+      "price": 350,
+      "badge": "Bestseller",
+      "badge_color": "gold",
+      "buy_link": "contact.html",
+      "image": ""
+    },
+    {
+      "id": "ca-foundation-paper-2-guide",
+      "name": "CA Foundation Paper 2 Business Laws",
+      "category": "books",
+      "description": "Comprehensive coverage of business law, corporate regulations and correspondence. Updated for the latest ICAI syllabus with case-based examples.",
+      "price": 320,
+      "badge": "New",
+      "badge_color": "green",
+      "buy_link": "contact.html",
+      "image": ""
+    },
+    {
+      "id": "ca-foundation-paper-3-guide",
+      "name": "CA Foundation Paper 3 Maths & Stats",
+      "category": "books",
+      "description": "Step-by-step coverage of business mathematics, logical reasoning and statistics. Clear explanations, structured exercises and rapid revision sections.",
+      "price": 340,
+      "badge": "Bestseller",
+      "badge_color": "gold",
+      "buy_link": "contact.html",
+      "image": ""
+    },
+    {
+      "id": "ca-foundation-paper-4-guide",
+      "name": "CA Foundation Paper 4 Economics",
+      "category": "books",
+      "description": "Business economics and commercial knowledge for Paper 4 — micro and macro concepts explained with real-world examples and exam-ready summaries.",
+      "price": 300,
+      "badge": "",
+      "badge_color": "",
+      "buy_link": "contact.html",
+      "image": ""
+    },
+    {
+      "id": "question-bank-vol-1",
+      "name": "Full Question Bank Vol. 1",
+      "category": "qbank",
+      "description": "Over 5,000 carefully curated questions covering Papers 1 and 2 — categorised by topic, difficulty and exam-relevance. The foundation of FA's winning record.",
+      "price": 420,
+      "badge": "Bestseller",
+      "badge_color": "gold",
+      "buy_link": "contact.html",
+      "image": ""
+    },
+    {
+      "id": "question-bank-vol-2",
+      "name": "Full Question Bank Vol. 2",
+      "category": "qbank",
+      "description": "5,000+ questions for Papers 3 and 4 — including past exam questions, practice problems and mock test sets. Updated for the current exam cycle.",
+      "price": 420,
+      "badge": "New",
+      "badge_color": "green",
+      "buy_link": "contact.html",
+      "image": ""
+    },
+    {
+      "id": "ca-foundation-complete-kit",
+      "name": "CA Foundation Complete Study Kit",
+      "category": "kits",
+      "description": "The complete FA package — all four paper guides, both question bank volumes and a revision planner in a single kit. Everything you need to clear CA Foundation.",
+      "price": 1600,
+      "badge": "Top Pick",
+      "badge_color": "teal",
+      "buy_link": "contact.html",
+      "image": ""
+    },
+    {
+      "id": "revision-flashcards",
+      "name": "Revision Flashcard Set",
+      "category": "kits",
+      "description": "250 double-sided flashcards covering key definitions, formulae, legal provisions and economic concepts from all four CA Foundation papers.",
+      "price": 260,
+      "badge": "",
+      "badge_color": "",
+      "buy_link": "contact.html",
+      "image": ""
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "name": "Subiksha",
+      "course": "Tally Level 1",
+      "quote": "Tally made easy — very high energy classes. The practical lab sessions made me workplace-ready by the time I finished. Got placed within a month of completing the course.",
+      "achievement": "Placed within 1 month of course completion",
+      "featured": true
+    },
+    {
+      "name": "Nithish",
+      "course": "CA Inter, 2020",
+      "quote": "FA helped me gain valuable experiences beyond just academics — the sessions on life, leadership, and charity shaped who I am today as much as the coursework did.",
+      "achievement": "CA Inter Cleared",
+      "featured": true
+    },
+    {
+      "name": "Sasivarman",
+      "course": "CA Foundation, 2024",
+      "quote": "Great presentation style with real life examples that make even the driest accounting topics come alive. I never struggled to stay engaged in any session at FA.",
+      "achievement": "CA Foundation — First Attempt",
+      "featured": true
+    },
+    {
+      "name": "Vikram",
+      "course": "CA Foundation, 2024",
+      "quote": "The regular tests, meditation sessions, and confident teaching style genuinely improved my exam performance. I went in calm and prepared — that made all the difference.",
+      "achievement": "Distinction — CA Foundation 2024",
+      "featured": true
+    },
+    {
+      "name": "Meena Krishnan",
+      "course": "CA Foundation, 2024",
+      "quote": "Finance Academy transformed my understanding of accounting. I went from struggling to scoring in the top 5% of my batch — in a single semester.",
+      "achievement": "Top 5% — CA Foundation",
+      "featured": true
+    },
+    {
+      "name": "Ravi Kumar",
+      "course": "CA Foundation — State Topper",
+      "quote": "The question bank of 10,000+ questions is FA's real advantage. Nothing in the exam could surprise me. I cleared with distinction.",
+      "achievement": "State Topper — Tamil Nadu",
+      "featured": true
+    }
+  ]
+}

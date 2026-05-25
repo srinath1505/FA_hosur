@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "title": "Tally Empanelment Certificate Awarded",
+      "date": "May 2024",
+      "description": "FA received official Tally empanelment certification, recognising our Tally training program as meeting national standards for professional software education.",
+      "category": "achievement"
+    },
+    {
+      "title": "FABLE — FA's New Learning Platform Launched",
+      "date": "Sep 2023",
+      "description": "Launch of FABLE, FA's structured learning framework that combines classroom excellence with digital resources, enabling students to access notes and practice tests from anywhere.",
+      "category": "launch"
+    },
+    {
+      "title": "AMBI-LEARN Sanskrit Initiative",
+      "date": "Jun 2023",
+      "description": "FA launched the AMBI-LEARN Sanskrit program as part of its commitment to holistic education — connecting students to India's intellectual heritage alongside professional finance training.",
+      "category": "launch"
+    },
+    {
+      "title": "Authors Day Celebrations",
+      "date": "Sep 2022",
+      "description": "FA celebrated Authors Day recognising the in-house publication efforts of faculty who have authored original study materials used by students across all programs.",
+      "category": "event"
+    }
+  ]
+}

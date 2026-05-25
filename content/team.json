@@ -1,0 +1,83 @@
+{
+  "core": [
+    {
+      "name": "CA. Raghavan",
+      "qualifications": "B.Com, FCA, DISA",
+      "subjects": "Accountancy, Taxation",
+      "experience": "25 years",
+      "bio": "Lead coach and author at FA. CA Raghavan brings 25 years of international service in accountancy and taxation. He has authored FA's proprietary study materials and has mentored multiple state-rank holders.",
+      "photo": ""
+    },
+    {
+      "name": "CA. Achuthaan",
+      "qualifications": "B.Com, ACA, ACS",
+      "subjects": "Accountancy, Auditing, Financial Management",
+      "experience": "9+ years",
+      "bio": "A dual-qualified CA and CS, Achuthaan brings a uniquely comprehensive perspective to financial topics. His teaching style bridges theory and real-world application across audit and finance management.",
+      "photo": ""
+    },
+    {
+      "name": "CA. Shruthilaya",
+      "qualifications": "B.Com, ACA",
+      "subjects": "Business Law",
+      "experience": "3+ years",
+      "bio": "Shruthilaya specialises in Business and Corporate Law, delivering complex legal concepts with clarity and student-friendly frameworks. Her exam-focused approach has produced strong Paper 2 results.",
+      "photo": ""
+    },
+    {
+      "name": "Mrs. Elavarasi",
+      "qualifications": "M.Com, MBA, MPhil, BEd",
+      "subjects": "Accounts, Law, Economics",
+      "experience": "10+ years",
+      "bio": "A versatile educator with post-graduate expertise across commerce subjects. Mrs Elavarasi is known for her systematic, student-first teaching approach and strong student relationships.",
+      "photo": ""
+    },
+    {
+      "name": "Mrs. Ambika",
+      "qualifications": "M.Com, MBA",
+      "subjects": "Accountancy, Economics, Law",
+      "experience": "10+ years",
+      "bio": "With over a decade at FA, Mrs Ambika's clarity and patience make complex accounting and economics topics accessible to students at every starting level.",
+      "photo": ""
+    },
+    {
+      "name": "Ms. Harini",
+      "qualifications": "B.Com, GCT, CGE, TCT",
+      "subjects": "Tally, Busy, MS Office",
+      "experience": "5+ years",
+      "bio": "Technology and accounting software specialist. Ms Harini runs FA's practical Tally and Busy programs with hands-on lab sessions that directly translate to workplace readiness.",
+      "photo": ""
+    },
+    {
+      "name": "Ms. Padmini",
+      "qualifications": "B.E., M.S (Computer Science — US)",
+      "subjects": "English, Communication Skills",
+      "experience": "6+ years",
+      "bio": "With an MS from the United States, Ms Padmini brings a global perspective to professional communication. Her sessions equip students for interviews, presentations, and professional correspondence.",
+      "photo": ""
+    },
+    {
+      "name": "Ms. Mukkani",
+      "qualifications": "M.A., M.Phil",
+      "subjects": "Yoga & Wellness",
+      "experience": "15+ years",
+      "bio": "FA's wellness anchor. With 15+ years of practice, Ms Mukkani leads meditation and yoga sessions that prepare students mentally for the demands of CA examinations.",
+      "photo": ""
+    },
+    {
+      "name": "Mr. Dilip Radhakrishnan",
+      "qualifications": "M.Sc",
+      "subjects": "Maths, Statistics, Logical Reasoning",
+      "experience": "12 years",
+      "bio": "A dedicated mathematics educator whose structured approach to quantitative aptitude and statistics has helped hundreds of students overcome their fear of Paper 3.",
+      "photo": ""
+    }
+  ],
+  "visiting": [
+    { "name": "CA. Vishwanathan", "qualifications": "FCA", "specialty": "GST & Indirect Tax" },
+    { "name": "CMA. Sundar", "qualifications": "FCMA", "specialty": "Cost Accounting" },
+    { "name": "CA. Priya Nair", "qualifications": "ACA", "specialty": "Corporate Finance" },
+    { "name": "Dr. Muthukumar", "qualifications": "PhD (Commerce)", "specialty": "Business Economics" },
+    { "name": "Adv. Krishnaswamy", "qualifications": "LLB, LLM", "specialty": "Corporate Law" }
+  ]
+}
