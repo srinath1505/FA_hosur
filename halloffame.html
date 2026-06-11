@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hall of Fame | FA Finance Academy</title>
+  <meta name="description" content="FA Finance Academy's Hall of Fame — celebrating our achievers, rank holders, and the moments that define our legacy in Hosur." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200..700;1,9..144,200..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"></noscript>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Hall of Fame — page-specific ── */
+    .hof-intro {
+      padding: 72px 0 56px;
+      background: var(--bg);
+    }
+    .hof-intro-inner {
+      max-width: 640px;
+    }
+    .hof-intro-inner .label { margin-bottom: 18px; }
+    .hof-intro-inner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.15;
+      color: var(--text-1);
+      margin-bottom: 20px;
+    }
+    .hof-intro-inner h2 em { color: var(--gold); font-style: italic; }
+    .hof-intro-inner p {
+      font-size: 1.05rem;
+      color: var(--text-2);
+      line-height: 1.75;
+    }
+
+    /* ── Mosaic gallery ── */
+    .hof-gallery-section {
+      background: var(--surface);
+      padding: 0 0 80px;
+    }
+    .hof-mosaic {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 440px 440px 340px;
+      gap: 10px;
+    }
+    .hof-hero  { grid-column: 1 / -1; grid-row: 1; }
+    .hof-left  { grid-column: 1;       grid-row: 2; }
+    .hof-right { grid-column: 2;       grid-row: 2; }
+    .hof-bl    { grid-column: 1;       grid-row: 3; }
+    .hof-br    { grid-column: 2;       grid-row: 3; }
+
+    .hof-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      background: var(--surface-2);
+    }
+    .hof-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.6s cubic-bezier(.25,.8,.25,1);
+    }
+    .hof-item:hover img { transform: scale(1.04); }
+
+    /* gradient + caption overlay */
+    .hof-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+        rgba(5,7,15,.72) 0%,
+        rgba(5,7,15,.18) 45%,
+        transparent 70%);
+      pointer-events: none;
+    }
+    .hof-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 2;
+      padding: 20px 22px;
+    }
+    .hof-caption-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+    .hof-caption-title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      font-style: italic;
+      color: #fff;
+      line-height: 1.3;
+    }
+    .hof-hero .hof-caption-title { font-size: 1.45rem; }
+
+    /* rank-holder special treatment */
+    .hof-rank-badge {
+      position: absolute;
+      top: 18px; right: 18px;
+      z-index: 3;
+      background: var(--gold);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 2px;
+    }
+
+    /* Mobile: stack all items */
+    @media (max-width: 768px) {
+      .hof-mosaic {
+        grid-template-columns: 1fr;
+        grid-template-rows: 260px 360px 240px 240px 240px;
+      }
+      .hof-hero  { grid-column: 1; grid-row: 1; }
+      .hof-left  { grid-column: 1; grid-row: 2; }
+      .hof-right { grid-column: 1; grid-row: 3; }
+      .hof-bl    { grid-column: 1; grid-row: 4; }
+      .hof-br    { grid-column: 1; grid-row: 5; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .hof-mosaic { grid-template-rows: 320px 340px 280px; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-text">FA</div>
+  <div class="loader-line"></div>
+</div>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-brand">
+    <img src="assets/images/logo.png" alt="FA Finance Academy" class="nav-logo">
+    <span class="nav-brand-text">Finance Academy<span>Hosur, Tamil Nadu</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="programs.html" class="nav-link">Programs</a>
+    <a href="store.html" class="nav-link">Store</a>
+    <a href="lounge.html" class="nav-link">Lounge</a>
+    <a href="halloffame.html" class="nav-link active">Hall of Fame</a>
+  </div>
+  <div class="nav-cta">
+    <a href="contact.html" class="btn-nav">Enroll Now</a>
+  </div>
+  <button class="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div id="nav-overlay">
+  <a href="index.html" class="nav-overlay-link">Home</a>
+  <a href="about.html" class="nav-overlay-link">About</a>
+  <a href="programs.html" class="nav-overlay-link">Programs</a>
+  <a href="store.html" class="nav-overlay-link">Store</a>
+  <a href="lounge.html" class="nav-overlay-link">Lounge</a>
+  <a href="halloffame.html" class="nav-overlay-link">Hall of Fame</a>
+  <a href="contact.html" class="nav-overlay-link">Contact</a>
+</div>
+
+<!-- Page Hero -->
+<header class="page-hero">
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="label page-hero-label reveal">Our Legacy</div>
+    <h1 class="page-hero-title reveal" data-delay="1">Hall of <em>Fame</em></h1>
+    <p class="page-hero-sub reveal" data-delay="2">Every great result starts with a decision to show up. These are the moments, the people, and the celebrations that define what FA stands for.</p>
+  </div>
+</header>
+
+<!-- Intro + Stats -->
+<section class="hof-intro">
+  <div class="container">
+    <div class="hof-intro-inner reveal">
+      <div class="label">Why It Matters</div>
+      <h2>More Than a School —<br>A <em>Community of Winners</em></h2>
+      <p>From All India Rank holders to first-generation finance professionals, FA's Hall of Fame captures the human side of every result. These aren't just photographs — they are proof that the right environment changes everything.</p>
+    </div>
+    <div class="stats-band-grid" style="margin-top:48px;max-width:720px;">
+      <div class="stat-cell reveal">
+        <span class="stat-num"><span data-count="100">0</span><span class="stat-suf">+</span></span>
+        <span class="stat-lbl">Rank &amp; Merit Winners</span>
+      </div>
+      <div class="stat-cell reveal" data-delay="1">
+        <span class="stat-num">12<span class="stat-suf">+</span></span>
+        <span class="stat-lbl">Years of Excellence</span>
+      </div>
+      <div class="stat-cell reveal" data-delay="2">
+        <span class="stat-num"><span data-count="500">0</span><span class="stat-suf">+</span></span>
+        <span class="stat-lbl">Lives Transformed</span>
+      </div>
+      <div class="stat-cell reveal" data-delay="3">
+        <span class="stat-num">AIR</span>
+        <span class="stat-lbl">All India Rank Holders</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Mosaic -->
+<section class="hof-gallery-section">
+  <div class="container" style="padding-top:0;">
+
+    <div class="hof-mosaic">
+
+      <!-- Image 4: Women's Day — full-width hero -->
+      <div class="hof-item hof-hero reveal">
+        <img src="assets/images/halloffame/hof-4-womensday.jpg"
+             alt="FA Celebrates Women's Day — Essence of Womanhood" loading="lazy">
+        <div class="hof-caption">
+          <span class="hof-caption-tag">Event</span>
+          <div class="hof-caption-title">Essence of Womanhood — Women's Day Celebrations at FA</div>
+        </div>
+      </div>
+
+      <!-- Image 5: AIR Rank Holder — portrait, left -->
+      <div class="hof-item hof-left reveal">
+        <img src="assets/images/halloffame/hof-5-rankholder.jpg"
+             alt="CA Foundation All India Rank Holder at FA" loading="lazy">
+        <span class="hof-rank-badge">AIR Holder</span>
+        <div class="hof-caption">
+          <span class="hof-caption-tag">Achievement</span>
+          <div class="hof-caption-title">CA Foundation — All India Rank Holder &amp; CA Finalist</div>
+        </div>
+      </div>
+
+      <!-- Image 1: FA Team in uniform — landscape, right -->
+      <div class="hof-item hof-right reveal" data-delay="1">
+        <img src="assets/images/halloffame/hof-1-team.jpg"
+             alt="The FA team in Finance Academy uniforms" loading="lazy">
+        <div class="hof-caption">
+          <span class="hof-caption-tag">Team</span>
+          <div class="hof-caption-title">The People Behind Every Result — The FA Family</div>
+        </div>
+      </div>
+
+      <!-- Image 2: Traditional celebration — bottom left -->
+      <div class="hof-item hof-bl reveal">
+        <img src="assets/images/halloffame/hof-2-celebration.jpg"
+             alt="FA students and faculty at an annual celebration" loading="lazy">
+        <div class="hof-caption">
+          <span class="hof-caption-tag">Celebration</span>
+          <div class="hof-caption-title">Annual FA Celebration — Students &amp; Faculty Together</div>
+        </div>
+      </div>
+
+      <!-- Image 3: Office group — bottom right -->
+      <div class="hof-item hof-br reveal" data-delay="1">
+        <img src="assets/images/halloffame/hof-3-office.jpg"
+             alt="FA batch group photo at the Finance Academy Hosur office" loading="lazy">
+        <div class="hof-caption">
+          <span class="hof-caption-tag">Batch</span>
+          <div class="hof-caption-title">Another Batch, Another Chapter — at FA Hosur</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="label" style="justify-content:center;margin-bottom:24px;">Be Part of the Story</div>
+    <h2 class="cta-title">Your Name Could Be<br><em>On This Wall</em></h2>
+    <p class="cta-sub">Every result in this gallery started with one decision — to enroll at FA. Take yours today.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-cta-dark">Enroll Now &nbsp;<i class="fas fa-arrow-right"></i></a>
+      <a href="programs.html" class="btn btn-ghost-light">View Programs</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="assets/images/logo.png" alt="FA Finance Academy" class="footer-logo">
+        </div>
+        <p>FA – the Finance Academy. 26 programs, 9 modes, 500+ students, 100+ winners. Hosur's most trusted finance institution.</p>
+        <div class="f-socials">
+          <a href="#" class="f-social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/918098301702" class="f-social"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="f-social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-title">Navigation</span>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="about.html" class="footer-link">We Are FA</a>
+          <a href="programs.html" class="footer-link">Programs</a>
+          <a href="store.html" class="footer-link">FA Store</a>
+          <a href="lounge.html" class="footer-link">Lounge</a>
+          <a href="halloffame.html" class="footer-link">Hall of Fame</a>
+          <a href="contact.html" class="footer-link">Contact</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-title">Programs</span>
+        <div class="footer-links">
+          <a href="programs.html" class="footer-link">CA Foundation Paper 1</a>
+          <a href="programs.html" class="footer-link">CA Foundation Paper 2</a>
+          <a href="programs.html" class="footer-link">CA Foundation Paper 3</a>
+          <a href="programs.html" class="footer-link">CA Foundation Paper 4</a>
+          <a href="programs.html" class="footer-link">Professional Development</a>
+          <a href="programs.html" class="footer-link">Custom Coaching</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer-col-title">Contact</span>
+        <div class="footer-links">
+          <a href="tel:+918098301702" class="footer-link">+91 8098-301-702</a>
+          <a href="tel:+918098301703" class="footer-link">+91 8098-301-703</a>
+          <a href="mailto:supportfa@fahosur.com" class="footer-link">supportfa@fahosur.com</a>
+          <span class="footer-link" style="cursor:default;line-height:1.7;">S-2 Marutham Enclave, 2nd Floor<br>Gandhi Nagar, HUDCO, Hosur – 635109</span>
+          <span class="footer-link" style="cursor:default;">Mon – Sat &nbsp;9:00am – 6:00pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 FA – the Finance Academy. All rights reserved.</span>
+      <span>Hosur, Tamil Nadu &nbsp;·&nbsp; supportfa@fahosur.com</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/918098301702" id="wa-float" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="#" id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>gsap.registerPlugin(ScrollTrigger);</script>
+<script src="js/main.js"></script>
+</body>
+</html>

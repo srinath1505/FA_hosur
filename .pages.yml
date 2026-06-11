@@ -143,6 +143,17 @@ content:
             - { label: Launch,      value: launch      }
       - { name: image,       label: "Event Photo",          type: image  }
 
+  - name: halloffame_gallery
+    label: Hall of Fame Gallery
+    path: content/halloffame
+    type: collection
+    view:
+      fields: [caption_title, tag]
+    fields:
+      - { name: caption_title, label: "Caption / Title",        type: string }
+      - { name: tag,           label: "Tag (e.g. Achievement)", type: string }
+      - { name: image,         label: "Photo",                  type: image  }
+
   - name: walloffame
     label: Wall of Fame
     path: content/walloffame
